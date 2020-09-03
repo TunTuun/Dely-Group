@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Dely Group</title>
+    <title>Delay Systems</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/reset.css">
@@ -14,7 +14,7 @@
     <header>
         <div class="header-wrapper">
             <div class="logotype">
-                <img src="/img/logotype.png" alt="logo">
+                <img src="/img/logotype.png" alt="Логотип">
             </div>
             <div class="nav-wrapper">
                 <nav class="header-nav">
@@ -28,12 +28,17 @@
                 </nav>
                 <div class="account-section">
                     <a href="#" class="account-section__button">Личный кабинет</a>
-                    <div class="account-section__menu"></div>
+                    <div class="account-section__menu" id="header_dropdown">
+                        <img src="/img/burger.png" alt="Меню">
+                        <div class="account-section__dropdown-text">
+                            Меню
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
-    <div class="header-dropdown">
+    <div class="header-dropdown mobile-toggle">
         <div class="nav-wrapper nav-wrapper-mobile">
             <nav class="header-nav">
                 <a href="#" class="header-nav__link">Главная</a>
@@ -46,6 +51,51 @@
             </nav>
         </div>
     </div>
+    <main>
+        <section class="proposition-section proposition-section-position container">
+            <div class="proposition-section__inner">
+                <div class="proposition-section__img">
+                    <img src="/img/proposition-img.png" alt="Предложение">
+                </div>
+                <div class="proposition-section__text">
+                    <h1>Деньги должны работать<br>
+                        и приносить прибыль!</h1>
+                    <button class="proposition-section__button" type="button">
+                        Выбрать тариф
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="concept-description concept-description-position container">
+            <div class="concept-description__inner">
+                <div class="concept-description__text">
+                    <h2>Как работает<br>платформа Dely Group?</h2>
+                    <p>Наша онлайн-платформа – это микс 
+                        публичности и приватности. Публичность 
+                        заключается в полной прозрачности, 
+                        предсказуемости и автоматизированности 
+                        работы нашей компании, когда практически 
+                        исключен человеческий фактор.
+                        <br><br>
+                        Приватность предусматривает полную 
+                        анонимность 
+                        наших клиентов и партнеров, если только они сами не 
+                        захотят раскрыть себя или любые данные. Также мы 
+                        понимаем приватность как возможность наших 
+                        партнеров самим решать, когда и как инвестировать,
+                        когда и как выводить свои честно заработанные деньги.
+                        Для этого мы создали онлайн-кабинеты для каждого 
+                        клиента и поддержку 24/7.</p>
+                </div>
+                <div class="concept-description__img">
+                    <img src="/img/private-concept.png" alt="Приватность">
+                </div>
+            </div>
+        </section>
+        <section class="work-process container">
+
+        </section>
+    </main>
     <script src="js/main.js"></script>
     <script src="js/splide.min.js"></script>
 </body>
