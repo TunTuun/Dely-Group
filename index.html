@@ -11,6 +11,43 @@
 </head>
 
 <body>
+    <div class="authorization-showup mobile-toggle">
+        <div class="authorization-showup__wrapper">
+            <div class="authorization-showup__block authorization-section">
+                <button class="authorization-showup__close">
+                    <img src="/img/close-dialog.png" alt="Закрыть" onclick="account_section_show()">
+                </button>
+                <span class="authorization-section__title">Вход</span>
+                <span class="authorization-section__registration-message">Нет аккаунта? <a href="#" class="authorization-section__registration-link">Зарегистрироваться</a></span>
+                <div class="input-field-wrapper input-field-wrapper-position">
+                    <div class="input-field">
+                        <span class="input-field__title">
+                            Логин
+                        </span>
+                        <input type="text" placeholder="Ваш логин">
+                    </div>
+                    <div class="input-field">
+                        <a href="#" class="input-field__forgot-password">Забыли пароль?</a>
+                        <span class="input-field__title">
+                            Пароль
+                        </span>
+                        <input type="password" placeholder="Ваш пароль">
+                    </div>
+                </div>
+                <div class="authorization-error-message">
+                    Неверный логин или пароль
+                </div>
+                <div class="remember-checkbox-wrapper">
+                    <input type="checkbox" id="remember-checkbox" name="remember-checkbox" class="remember-checkbox">
+                    <label class="remember-checkbox-custom" for="remember-checkbox"></label>
+                    <span class="remember-checkbox-label">Запомнить меня</span>
+                </div>
+                <button class="authorization-section__login">
+                    Войти
+                </button>
+            </div>
+        </div>
+    </div>
     <header>
         <div class="header-wrapper">
             <div class="logotype">
@@ -27,7 +64,7 @@
                     <a href="#" class="header-nav__link">Контакты</a>
                 </nav>
                 <div class="account-section">
-                    <a href="#" class="account-section__button">Личный кабинет</a>
+                    <div class="account-section__button" id="account_button" onclick="account_section_show()">Личный кабинет</div>
                     <div class="account-section__menu" id="header_dropdown">
                         <img src="/img/burger.png" alt="Меню">
                         <div class="account-section__dropdown-text">
@@ -70,21 +107,21 @@
             <div class="concept-description__inner">
                 <div class="concept-description__text">
                     <h2>Как работает<br>платформа Dely Group?</h2>
-                    <p>Наша онлайн-платформа – это микс 
-                        публичности и приватности. Публичность 
-                        заключается в полной прозрачности, 
-                        предсказуемости и автоматизированности 
-                        работы нашей компании, когда практически 
+                    <p>Наша онлайн-платформа – это микс
+                        публичности и приватности. Публичность
+                        заключается в полной прозрачности,
+                        предсказуемости и автоматизированности
+                        работы нашей компании, когда практически
                         исключен человеческий фактор.
                         <br><br>
-                        Приватность предусматривает полную 
-                        анонимность 
-                        наших клиентов и партнеров, если только они сами не 
-                        захотят раскрыть себя или любые данные. Также мы 
-                        понимаем приватность как возможность наших 
+                        Приватность предусматривает полную
+                        анонимность
+                        наших клиентов и партнеров, если только они сами не
+                        захотят раскрыть себя или любые данные. Также мы
+                        понимаем приватность как возможность наших
                         партнеров самим решать, когда и как инвестировать,
                         когда и как выводить свои честно заработанные деньги.
-                        Для этого мы создали онлайн-кабинеты для каждого 
+                        Для этого мы создали онлайн-кабинеты для каждого
                         клиента и поддержку 24/7.</p>
                 </div>
                 <div class="concept-description__img">

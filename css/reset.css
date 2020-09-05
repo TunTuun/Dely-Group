@@ -149,6 +149,13 @@ button {
 button:focus {
 	outline: none;
 }
+input {
+	border: none;
+	background-color: transparent;
+}
+input:focus {
+	outline: none;
+}
 body {
 	max-width: 100%;
 }
