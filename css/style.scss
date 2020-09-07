@@ -159,6 +159,7 @@ header {
 }
 
 .header-dropdown {
+    z-index: 3;
     display: block;
     position: absolute;
     top: 112px;
@@ -193,7 +194,7 @@ header {
         height: 70%;
         border-radius: 96px;
         @media (max-width: 1920px) {
-            width: 37%;
+            width: 40%;
             height: 90%;
         }
         @media (max-width: 768px) {
@@ -204,18 +205,29 @@ header {
         @media (max-width: 425px) {
             border-radius: 48px;
             width: 80%;
-            height: 60%;
+            height: 70%;
         }
         @media (max-width: 340px) {
             border-radius: 42px;
             width: 90%;
-            height: 50%;
+            height: 80%;
         }
     }
     &__close {
         position: absolute;
         top: 10%;
         right: 10%;
+        @media (max-width: 425px) {
+            top: 7%;
+            right: 9%;
+        }
+
+        & > img {
+            @media (max-width: 425px) {
+                width: 12px;
+                height: 11px;
+            }
+        }
     }
 }
 
@@ -225,6 +237,9 @@ header {
     flex-direction: column;
     &-position {
         margin-top: 20px;
+        @media (max-width: 425px) {
+            margin-top: 0;
+        }
     }
 }
 
@@ -234,10 +249,16 @@ header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    @media (max-width: 425px) {
+        margin-top: 15px;
+    }
     &__title {
         font-size: 20px;
         line-height: 24px;
         margin-bottom: 5px;
+        @media (max-width: 425px) {
+            font-size: 16px;
+        }
     }
     & > input {
         display: flex;
@@ -248,6 +269,11 @@ header {
         border: 1px solid $opacity;
         box-sizing: border-box;
         border-radius: 10px;
+        @media (max-width: 425px) {
+            font-size: 10px;
+            height: 20px;
+            padding: 13px;
+        }
     }
     & > input:focus {
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
@@ -256,7 +282,36 @@ header {
         position: absolute;
         top: 0;
         right: 0;
+        @media (max-width: 425px) {
+            text-align: center;
+            font-size: 12px;
+            color: $gray_;
+            top: 131%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
+    &-registration {
+        @media(max-width:1600px) {
+            margin-top: 10px;
+        }
+        & > input {
+            @media(max-width:1366px) {
+                height: 25px;
+            }
+        }
+        & > span {
+            @media(max-width: 425px) {
+                line-height: 14px;
+                font-size: 12px;
+                margin-bottom: 2px;
+            }
+        }
+    }
+}
+
+.message-toggle {
+    display: none !important;
 }
 
 .authorization-error-message {
@@ -266,6 +321,14 @@ header {
     line-height: 19px;
     color: $error;
     text-align: center;
+    @media (max-width: 425px) {
+        font-size: 14px;
+        margin-top: 35px;
+    }
+}
+
+.remember-checkbox-custom {
+    cursor: pointer;
 }
 
 .remember-checkbox-wrapper {
@@ -273,9 +336,16 @@ header {
     margin-top: 40px;
     display: flex;
     justify-content: flex-start;
+    &-registration {
+        margin-top: 20px;
+        @media(max-width:425px) {
+            display: none;
+        }
+    }
 }
 
 .remember-checkbox {
+    cursor: pointer;
     position: absolute;
     opacity: 0;
 }
@@ -299,6 +369,12 @@ header {
     box-sizing: border-box;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.07);
     border-radius: 3px;
+    @media (max-width: 425px) {
+        width: 12px;
+        height: 12px;
+        border-width: 2px;
+        background-size: contain;
+    }
 }
 
 .remember-checkbox:checked + label::before {
@@ -312,6 +388,21 @@ header {
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
+    @media (max-width: 425px) {
+        font-size: 12px;
+        margin-left: 5px;
+    }
+}
+
+.license-agreement {
+    display: none;
+    @media (max-width: 425px) {
+        display: block;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        color: $gray_;
+        font-size: 10px;
+    }   
 }
 
 .authorization-section {
@@ -321,11 +412,18 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @media (max-width: 425px) {
+        padding: 5% 7%;
+    }
     &__title {
         font-style: normal;
         font-weight: 600;
         font-size: 40px;
         line-height: 48px;
+        @media (max-width: 425px) {
+            line-height: 36px;
+            font-size: 24px;
+        }
     }
     &__registration-message {
         margin-top: 10px;
@@ -334,8 +432,13 @@ header {
         font-weight: normal;
         font-size: 18px;
         line-height: 21px;
+        @media (max-width: 425px) {
+            margin-top: unset;
+            font-size: 12px;
+        }
     }
     &__registration-link {
+        cursor: pointer;
         color: $lightblue !important;
         border-bottom: 1px solid $lightblue;
     }
@@ -349,6 +452,11 @@ header {
         font-size: 18px;
         line-height: 21px;
         text-align: center;
+        @media (max-width: 425px) {
+            margin-top: 5px;
+            font-size: 12px;
+            padding: 5px 60px;
+        }
     }
 }
 
@@ -396,6 +504,12 @@ header {
         margin-left: 80px;
         cursor: pointer;
         user-select: none;
+        @media (max-width: 425px) {
+            margin-left: 10px;
+        }
+        @media (max-width: 335px) {
+            margin-left: 40px;
+        }
         &:before {
             content: "";
             display: inline-block;
@@ -408,12 +522,19 @@ header {
             @media (max-width: 1440px) {
                 top: -8px;
             }
+            @media (max-width: 425px) {
+                top: -5px;
+                left: -10px;
+                width: 3px;
+                height: 20px;
+            }
+            @media (max-width: 335px) {
+                top: -5px;
+                height: 33px;
+            }
         }
         &:hover {
             color: $yellow_;
-        }
-        @media (max-width: 425px) {
-            margin-left: 40px;
         }
     }
     &__menu {

@@ -18,7 +18,7 @@
                     <img src="/img/close-dialog.png" alt="Закрыть" onclick="account_section_show()">
                 </button>
                 <span class="authorization-section__title">Вход</span>
-                <span class="authorization-section__registration-message">Нет аккаунта? <a href="#" class="authorization-section__registration-link">Зарегистрироваться</a></span>
+                <span class="authorization-section__registration-message">Нет аккаунта? <a class="authorization-section__registration-link" onclick="account_section_registration_show()">Зарегистрироваться</a></span>
                 <div class="input-field-wrapper input-field-wrapper-position">
                     <div class="input-field">
                         <span class="input-field__title">
@@ -34,7 +34,7 @@
                         <input type="password" placeholder="Ваш пароль">
                     </div>
                 </div>
-                <div class="authorization-error-message">
+                <div class="authorization-error-message message-toggle">
                     Неверный логин или пароль
                 </div>
                 <div class="remember-checkbox-wrapper">
@@ -44,6 +44,61 @@
                 </div>
                 <button class="authorization-section__login">
                     Войти
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="authorization-showup registration-showup mobile-toggle">
+        <div class="authorization-showup__wrapper">
+            <div class="authorization-showup__block authorization-section">
+                <button class="authorization-showup__close">
+                    <img src="/img/close-dialog.png" alt="Закрыть" onclick="account_section_registration_close()">
+                </button>
+                <span class="authorization-section__title">Регистрация</span>
+                <span class="authorization-section__registration-message">Уже есть аккаунт? <a onclick="account_section_registration_show()" class="authorization-section__registration-link">Авторизоваться</a></span>
+                <div class="input-field-wrapper input-field-wrapper-position">
+                    <div class="input-field input-field-registration">
+                        <span class="input-field__title">
+                            Логин
+                        </span>
+                        <input type="text" placeholder="Ваш логин">
+                    </div>
+                    <div class="input-field input-field-registration">
+                        <span class="input-field__title">
+                            E-mail
+                        </span>
+                        <input type="text" placeholder="Ваш E-mail">
+                    </div>
+                    <div class="input-field input-field-registration">
+                        <span class="input-field__title">
+                            Пароль
+                        </span>
+                        <input type="password" placeholder="Ваш пароль">
+                    </div>
+                    <div class="input-field input-field-registration">
+                        <span class="input-field__title">
+                            Имя
+                        </span>
+                        <input type="text" placeholder="Ваше имя">
+                    </div>
+                    <div class="input-field input-field-registration">
+                        <span class="input-field__title">
+                            Фамилия
+                        </span>
+                        <input type="text" placeholder="Ваша фамилия">
+                    </div>
+                </div>
+                <div class="authorization-error-message message-toggle">
+                    Неверно заполнены поля
+                </div>
+                <div class="remember-checkbox-wrapper remember-checkbox-wrapper-registration">
+                    <input type="checkbox" id="accept-checkbox" name="accept-checkbox" class="remember-checkbox">
+                    <label class="remember-checkbox-custom" for="accept-checkbox"></label>
+                    <span class="remember-checkbox-label">Я согласен с условиями использования сервиса Delay Systems</span>
+                </div>
+                <span class="license-agreement">Нажимая "Зарегистрироваться" Вы соглашаетесь с условиями использования сервиса Delay Systems</span>
+                <button class="authorization-section__login  authorization-section__login-registration">
+                    Зарегистрироваться
                 </button>
             </div>
         </div>

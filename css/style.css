@@ -196,6 +196,7 @@ header {
 }
 
 .header-dropdown {
+  z-index: 3;
   display: block;
   position: absolute;
   top: 112px;
@@ -242,7 +243,7 @@ header {
 
 @media (max-width: 1920px) {
   .authorization-showup__block {
-    width: 37%;
+    width: 40%;
     height: 90%;
   }
 }
@@ -259,7 +260,7 @@ header {
   .authorization-showup__block {
     border-radius: 48px;
     width: 80%;
-    height: 60%;
+    height: 70%;
   }
 }
 
@@ -267,7 +268,7 @@ header {
   .authorization-showup__block {
     border-radius: 42px;
     width: 90%;
-    height: 50%;
+    height: 80%;
   }
 }
 
@@ -275,6 +276,20 @@ header {
   position: absolute;
   top: 10%;
   right: 10%;
+}
+
+@media (max-width: 425px) {
+  .authorization-showup__close {
+    top: 7%;
+    right: 9%;
+  }
+}
+
+@media (max-width: 425px) {
+  .authorization-showup__close > img {
+    width: 12px;
+    height: 11px;
+  }
 }
 
 .input-field-wrapper {
@@ -292,6 +307,12 @@ header {
   margin-top: 20px;
 }
 
+@media (max-width: 425px) {
+  .input-field-wrapper-position {
+    margin-top: 0;
+  }
+}
+
 .input-field {
   position: relative;
   margin-top: 25px;
@@ -307,10 +328,22 @@ header {
           align-items: flex-start;
 }
 
+@media (max-width: 425px) {
+  .input-field {
+    margin-top: 15px;
+  }
+}
+
 .input-field__title {
   font-size: 20px;
   line-height: 24px;
   margin-bottom: 5px;
+}
+
+@media (max-width: 425px) {
+  .input-field__title {
+    font-size: 16px;
+  }
 }
 
 .input-field > input {
@@ -329,6 +362,14 @@ header {
   border-radius: 10px;
 }
 
+@media (max-width: 425px) {
+  .input-field > input {
+    font-size: 10px;
+    height: 20px;
+    padding: 13px;
+  }
+}
+
 .input-field > input:focus {
   -webkit-box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
@@ -340,6 +381,42 @@ header {
   right: 0;
 }
 
+@media (max-width: 425px) {
+  .input-field__forgot-password {
+    text-align: center;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.5);
+    top: 131%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 1600px) {
+  .input-field-registration {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .input-field-registration > input {
+    height: 25px;
+  }
+}
+
+@media (max-width: 425px) {
+  .input-field-registration > span {
+    line-height: 14px;
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+}
+
+.message-toggle {
+  display: none !important;
+}
+
 .authorization-error-message {
   margin-top: 20px;
   font-weight: 500;
@@ -347,6 +424,17 @@ header {
   line-height: 19px;
   color: #ff0000;
   text-align: center;
+}
+
+@media (max-width: 425px) {
+  .authorization-error-message {
+    font-size: 14px;
+    margin-top: 35px;
+  }
+}
+
+.remember-checkbox-custom {
+  cursor: pointer;
 }
 
 .remember-checkbox-wrapper {
@@ -360,7 +448,18 @@ header {
           justify-content: flex-start;
 }
 
+.remember-checkbox-wrapper-registration {
+  margin-top: 20px;
+}
+
+@media (max-width: 425px) {
+  .remember-checkbox-wrapper-registration {
+    display: none;
+  }
+}
+
 .remember-checkbox {
+  cursor: pointer;
   position: absolute;
   opacity: 0;
 }
@@ -398,6 +497,15 @@ header {
   border-radius: 3px;
 }
 
+@media (max-width: 425px) {
+  .remember-checkbox + label::before {
+    width: 12px;
+    height: 12px;
+    border-width: 2px;
+    background-size: contain;
+  }
+}
+
 .remember-checkbox:checked + label::before {
   border-color: #ffee00;
   background-color: #ffee00;
@@ -409,6 +517,27 @@ header {
   font-weight: normal;
   font-size: 18px;
   line-height: 21px;
+}
+
+@media (max-width: 425px) {
+  .remember-checkbox-label {
+    font-size: 12px;
+    margin-left: 5px;
+  }
+}
+
+.license-agreement {
+  display: none;
+}
+
+@media (max-width: 425px) {
+  .license-agreement {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 10px;
+  }
 }
 
 .authorization-section {
@@ -430,11 +559,24 @@ header {
           align-items: center;
 }
 
+@media (max-width: 425px) {
+  .authorization-section {
+    padding: 5% 7%;
+  }
+}
+
 .authorization-section__title {
   font-style: normal;
   font-weight: 600;
   font-size: 40px;
   line-height: 48px;
+}
+
+@media (max-width: 425px) {
+  .authorization-section__title {
+    line-height: 36px;
+    font-size: 24px;
+  }
 }
 
 .authorization-section__registration-message {
@@ -446,7 +588,15 @@ header {
   line-height: 21px;
 }
 
+@media (max-width: 425px) {
+  .authorization-section__registration-message {
+    margin-top: unset;
+    font-size: 12px;
+  }
+}
+
 .authorization-section__registration-link {
+  cursor: pointer;
   color: #00c2ff !important;
   border-bottom: 1px solid #00c2ff;
 }
@@ -461,6 +611,14 @@ header {
   font-size: 18px;
   line-height: 21px;
   text-align: center;
+}
+
+@media (max-width: 425px) {
+  .authorization-section__login {
+    margin-top: 5px;
+    font-size: 12px;
+    padding: 5px 60px;
+  }
 }
 
 .nav-wrapper {
@@ -536,6 +694,18 @@ header {
           user-select: none;
 }
 
+@media (max-width: 425px) {
+  .account-section__button {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 335px) {
+  .account-section__button {
+    margin-left: 40px;
+  }
+}
+
 .account-section__button:before {
   content: "";
   display: inline-block;
@@ -553,14 +723,24 @@ header {
   }
 }
 
-.account-section__button:hover {
-  color: #ffee00;
+@media (max-width: 425px) {
+  .account-section__button:before {
+    top: -5px;
+    left: -10px;
+    width: 3px;
+    height: 20px;
+  }
 }
 
-@media (max-width: 425px) {
-  .account-section__button {
-    margin-left: 40px;
+@media (max-width: 335px) {
+  .account-section__button:before {
+    top: -5px;
+    height: 33px;
   }
+}
+
+.account-section__button:hover {
+  color: #ffee00;
 }
 
 .account-section__menu {
