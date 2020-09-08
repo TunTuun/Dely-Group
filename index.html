@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/splide.min.css">
+    <link rel="stylesheet" href="css/splide-core.min.css">
 </head>
 
 <body>
@@ -15,10 +15,12 @@
         <div class="authorization-showup__wrapper">
             <div class="authorization-showup__block authorization-section">
                 <button class="authorization-showup__close">
-                    <img src="/img/close-dialog.png" alt="Закрыть" onclick="account_section_show()">
+                    <img src="/img/close-dialog.png" alt="Закрыть" id="close_dialog_authorization">
                 </button>
                 <span class="authorization-section__title">Вход</span>
-                <span class="authorization-section__registration-message">Нет аккаунта? <a class="authorization-section__registration-link" onclick="account_section_registration_show()">Зарегистрироваться</a></span>
+                <span class="authorization-section__registration-message">Нет аккаунта? <a
+                        class="authorization-section__registration-link"
+                        id="link_registration">Зарегистрироваться</a></span>
                 <div class="input-field-wrapper input-field-wrapper-position">
                     <div class="input-field">
                         <span class="input-field__title">
@@ -52,10 +54,12 @@
         <div class="authorization-showup__wrapper">
             <div class="authorization-showup__block authorization-section">
                 <button class="authorization-showup__close">
-                    <img src="/img/close-dialog.png" alt="Закрыть" onclick="account_section_registration_close()">
+                    <img src="/img/close-dialog.png" alt="Закрыть" id="close_dialog_registration">
                 </button>
                 <span class="authorization-section__title">Регистрация</span>
-                <span class="authorization-section__registration-message">Уже есть аккаунт? <a onclick="account_section_registration_show()" class="authorization-section__registration-link">Авторизоваться</a></span>
+                <span class="authorization-section__registration-message">Уже есть аккаунт? <a
+                        class="authorization-section__registration-link"
+                        id="link_autorization">Авторизоваться</a></span>
                 <div class="input-field-wrapper input-field-wrapper-position">
                     <div class="input-field input-field-registration">
                         <span class="input-field__title">
@@ -94,9 +98,11 @@
                 <div class="remember-checkbox-wrapper remember-checkbox-wrapper-registration">
                     <input type="checkbox" id="accept-checkbox" name="accept-checkbox" class="remember-checkbox">
                     <label class="remember-checkbox-custom" for="accept-checkbox"></label>
-                    <span class="remember-checkbox-label">Я согласен с условиями использования сервиса Delay Systems</span>
+                    <span class="remember-checkbox-label">Я согласен с условиями использования сервиса Delay
+                        Systems</span>
                 </div>
-                <span class="license-agreement">Нажимая "Зарегистрироваться" Вы соглашаетесь с условиями использования сервиса Delay Systems</span>
+                <span class="license-agreement">Нажимая "Зарегистрироваться" Вы соглашаетесь с условиями использования
+                    сервиса Delay Systems</span>
                 <button class="authorization-section__login  authorization-section__login-registration">
                     Зарегистрироваться
                 </button>
@@ -119,7 +125,7 @@
                     <a href="#" class="header-nav__link">Контакты</a>
                 </nav>
                 <div class="account-section">
-                    <div class="account-section__button" id="account_button" onclick="account_section_show()">Личный кабинет</div>
+                    <div class="account-section__button" id="account_button">Личный кабинет</div>
                     <div class="account-section__menu" id="header_dropdown">
                         <img src="/img/burger.png" alt="Меню">
                         <div class="account-section__dropdown-text">
@@ -184,8 +190,56 @@
                 </div>
             </div>
         </section>
-        <section class="work-process container">
-
+        <section class="work-process work-process-position">
+            <h2>Как с нами заработать?</h2>
+            <div class="process-sequence">
+                <div class="process-sequence__element">
+                    <div class="process-sequence__number">1</div>
+                    <div class="process-sequence__text">Регистрация на платформе</div>
+                </div>
+                <div class="process-sequence__element">
+                    <div class="process-sequence__number">2</div>
+                    <div class="process-sequence__text">Выбор инвестиционного пакета</div>
+                </div>
+                <div class="process-sequence__element">
+                    <div class="process-sequence__number">3</div>
+                    <div class="process-sequence__text">Выбор способа пополнения <br>и вывода средств</div>
+                </div>
+                <div class="process-sequence__element">
+                    <div class="process-sequence__number">4</div>
+                    <div class="process-sequence__text">Диверсификация инвестиций через разные пакеты, которые можно
+                        открыть одновременно</div>
+                </div>
+                <div class="process-sequence__element">
+                    <div class="process-sequence__number">5</div>
+                    <div class="process-sequence__text">Подсчет собственной прибыли <br>и финансовое планирование
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="invest-button">Инвестировать</a>
+        </section>
+        <section class="rate-slider rate-slider-position container">
+            <h2>Тарифы</h2>
+            <div class="rate-slider__inner splide">
+                <div class="splide__arrows">
+                    <button class="splide__arrow splide__arrow--prev">
+                        <img src="/img/prev-arrow.png" alt="Предыдущий">
+                    </button>
+                    <button class="splide__arrow splide__arrow--next">
+                        <img src="/img/next-arrow.png" alt="Следующий">
+                    </button>
+                </div>
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide"><img src="/img/private-concept.png" alt=""></li>
+                        <li class="splide__slide"><img src="/img/private-concept.png" alt=""></li>
+                        <li class="splide__slide"><img src="/img/private-concept.png" alt=""></li>
+                        <li class="splide__slide"><img src="/img/private-concept.png" alt=""></li>
+                        <li class="splide__slide"><img src="/img/private-concept.png" alt=""></li>
+                        <li class="splide__slide"><img src="/img/private-concept.png" alt=""></li>                    
+                    </ul>
+                </div>
+            </div>
         </section>
     </main>
     <script src="js/main.js"></script>
