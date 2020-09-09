@@ -36,7 +36,7 @@ window.addEventListener("click", function (event) {
     if (event.target.id === "link_autorization") {
         accountSectionRegistrationLink();
     }
-})
+});
 // Slider
 document.addEventListener('DOMContentLoaded', function () {
     new Splide('.splide', {
@@ -46,10 +46,35 @@ document.addEventListener('DOMContentLoaded', function () {
             prev: 'splide__arrow--prev your-class-prev',
             next: 'splide__arrow--next your-class-next',
         },
-        width: '95%',
         rewind: true,
         perPage: 3,
         perMove: 1,
         pagination: false,
+        breakpoints: {
+            768: {
+                focus: 2,
+                perPage: 2,
+                padding: {
+                    right: '120px',
+                },           
+            },
+            425: {
+                perPage: 2,
+                gap: "30px",
+                focus    : 'center',
+                padding: {
+                    right: '50px',
+                },  
+            },
+            340: {
+                perPage: 2,
+                gap: "50px",
+                focus    : 'center',
+                padding: {
+                    left: '20px',
+                    right: '40px',
+                },  
+            }
+        }
     }).mount();
 });
