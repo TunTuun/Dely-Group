@@ -37,9 +37,10 @@ window.addEventListener("click", function (event) {
         accountSectionRegistrationLink();
     }
 });
+
 // Slider
 document.addEventListener('DOMContentLoaded', function () {
-    new Splide('.splide', {
+    new Splide( '#rateSlider' , {
         classes: {
             arrows: 'splide__arrows your-class-arrows',
             arrow: 'splide__arrow your-class-arrow',
@@ -78,3 +79,40 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }).mount();
 });
+
+// Review slider
+document.addEventListener('DOMContentLoaded', function () {
+    new Splide('#reviewSlider', {
+        focus: 'center',
+        type: 'loop',
+        perPage: 1,
+        perMove: 1,
+        arrows: false,
+        autoplay: true,
+    }).mount();
+});
+
+// Accordion
+let accItem = document.getElementsByClassName('accordition-item');
+let accHD = document.getElementsByClassName('accordition-item__heading');
+let accArrows = document.getElementsByClassName('accordition-item__arrow');
+let i;
+for (i = 0; i < accHD.length; i++) {
+    accHD[i].addEventListener('click', toggleItem, false);
+}
+function toggleItem() {
+    let itemClass = this.parentNode.className;
+    for (i = 0; i < accItem.length; i++) {
+        accItem[i].className = 'accordition-item close';
+    }
+    for (i = 0; i < accArrows.length; i++) {
+        accArrows[i].className = 'accordition-item__arrow';
+    }
+    if (itemClass == 'accordition-item close') {
+        this.parentNode.className = 'accordition-item open';
+        this.previousElementSibling.classList == 'accordition-item__arrow '
+        if (this.previousElementSibling.classList == 'accordition-item__arrow') {
+            this.previousElementSibling.classList.toggle("transform-arrow");
+        }
+    }
+}

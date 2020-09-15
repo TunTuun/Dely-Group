@@ -220,7 +220,7 @@
         </section>
         <section class="rate-slider rate-slider-position container">
             <h2>Тарифы</h2>
-            <div class="rate-slider__inner splide">
+            <div class="rate-slider__inner splide" id="rateSlider">
                 <div class="splide__arrows">
                     <button class="splide__arrow splide__arrow--prev">
                         <img src="/img/prev-arrow.png" alt="Предыдущий">
@@ -349,6 +349,151 @@
                     </ul>
                 </div>
             </div>
+        </section>
+        <section class="review-section container">
+            <h2 class="review-title">Отзывы</h2>
+            <div class="review-slider-wrapper">
+                <div class="splide" id="reviewSlider">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <div class="review-element">
+                                    <div class="review-element__avatar">
+                                        <img src="../img/avatar.png" alt="Пользователь сайта">
+                                    </div>
+                                    <div class="review-element__inner">
+                                        <div class="review-element__name">Вася Пупкин</div>
+                                        <div class="review-element__text">Dely Group отличный способ разумно вложить
+                                            свои сбережения. Поддержка 24/7, отличные специалисты.<br>
+                                            Отлично! Советую!</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="review-element">
+                                    <div class="review-element__avatar">
+                                        <img src="../img/avatar.png" alt="Пользователь сайта">
+                                    </div>
+                                    <div class="review-element__inner">
+                                        <div class="review-element__name">Вася Пупкин</div>
+                                        <div class="review-element__text">Dely Group отличный способ разумно вложить
+                                            свои сбережения. Поддержка 24/7, отличные специалисты.<br>
+                                            Отлично! Советую!</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="review-element">
+                                    <div class="review-element__avatar">
+                                        <img src="../img/avatar.png" alt="Пользователь сайта">
+                                    </div>
+                                    <div class="review-element__inner">
+                                        <div class="review-element__name">Вася Пупкин</div>
+                                        <div class="review-element__text">Dely Group отличный способ разумно вложить
+                                            свои сбережения. Поддержка 24/7, отличные специалисты.<br>
+                                            Отлично! Советую!</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="review-element">
+                                    <div class="review-element__avatar">
+                                        <img src="../img/avatar.png" alt="Пользователь сайта">
+                                    </div>
+                                    <div class="review-element__inner">
+                                        <div class="review-element__name">Вася Пупкин</div>
+                                        <div class="review-element__text">Dely Group отличный способ разумно вложить
+                                            свои сбережения. Поддержка 24/7, отличные специалисты.<br>
+                                            Отлично! Советую!</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="splide__progress">
+                        <div class="splide__progress__bar">
+                        </div>
+                    </div>
+                </div>
+                <div class="review-selection">
+                    <a href="#" class="review-selection__button review-selection__button-picked">Оставить
+                        комментарий</a>
+                    <a href="#" class="review-selection__button">Все комментарии</a>
+                </div>
+            </div>
+        </section>
+        <section class="q-a-section container">
+            <h2>Вопросы и ответы</h2>
+            <div class="accordion-wrapper">
+                <div class="accordition-item close">
+                    <div class="accordition-item__arrow"></div>
+                    <h2 class="accordition-item__heading">Как начать зарабатывать?</h2>
+                    <div class="accordition-item__content">
+                        Для того, чтобы начать работу с компанией Dely Group,
+                            Вам следует пройти простую процедуру регистрации на нашем сайте.
+                            Далее необходимо внести свой первый депозит, выбрав соответствующий
+                            раздел в личном кабинете, после чего вся инвестиционная работа
+                            будет проводиться нашей компанией, а Вы, в свою очередь, будете
+                            получать с этого ежедневный доход.
+                    </div>
+                </div>
+                <div class="accordition-item close">
+                    <div class="accordition-item__arrow"></div>
+                    <h2 class="accordition-item__heading">Какая минимальная и максимальная сумма депозита?</h2>
+                    <div class="accordition-item__content">
+                        Минимальный размер депозита – 100 рублей. <br>
+                            Максимальный размер депозита – 10 000 000 рублей.
+                    </div>
+                </div>
+                <div class="accordition-item close">
+                    <div class="accordition-item__arrow"></div>
+                    <h2 class="accordition-item__heading">Какие существуют риски?</h2>
+                    <div class="accordition-item__content">
+                            Риски в инвестиции присутствуют всегда. Но речь идет о том, чтобы 
+                            этот риск был не просто оправдан, а о сведении его к минимуму. 
+                            Именно на это нацелены мы, наша бизнес-модель. Стратегия 
+                            минимизации рисков предусматривает сразу несколько компонентов: <br><br>
+                            
+                            <span>первый</span> – это команда аналитиков, которая отвечает за проект и
+                            постоянно работает с рисками разного уровня, как краткосрочными, 
+                            так и долгосрочными; <br><br>
+                            
+                            <span>второй</span> – у нас есть отдельная стратегия инвестирования (5 критериев), 
+                            которая также предусматривает минимизацию рисков именно в этом 
+                            направлении; <br><br>
+                            
+                            <span>третий</span> – диверсификация в работе, в первую очередь – инвестиций. 
+                            Мы четко держим баланс между краткосрочными инвестициями, 
+                            которые должны принести прибыль уже в ближайшей перспективе, и 
+                            долгосрочными инвестициями, которые служат для нас почвой для 
+                            стабильности и стратегического развития. Проще говоря, если у нас
+                            возникнут какие-либо финансовые сложности с одним стартапом, то мы 
+                            сможем это компенсировать прибылью с других. <br><br>
+                            
+                            <span>четвертый</span> – проект Dely основан на личных инвестициях его 
+                            собственников, которые являются также учредителями компании. 
+                            Эти средства составляют 100% первичных инвестиций Dely в 
+                            стартапы, и, согласно документам компании, процент собственников в 
+                            операционной инвестиционной деятельности никогда не должен 
+                            составлять меньше 51% от общей суммы инвестиций, которые компания 
+                            может привлечь. Таким образом, учредители нашей компании не просто 
+                            являются гарантами ее деятельности, но и обеспечивают стабильность 
+                            выплат для инвесторов, гарантируя их инвестиции своими. <br><br>
+                            
+                            <span>пятый</span> – мы постоянно ведем переговоры не только с новыми стартапами, 
+                            но также с инвестиционными и венчурными фондами, стартап-инкубаторами 
+                            и большими компаниями, в которых есть интерес в IT, чтобы привлечь их к 
+                            сотрудничеству, в том числе на уровне финансовой поддержки – кредитной, 
+                            инвестиционной, а в перспективе возможно и IPO. <br><br>
+                            
+                            Все это отображено также в нашей бизнес-модели и ежедневной работе, 
+                            поэтому следите за проектом и становитесь нашим инвестором, чтобы 
+                            лично убедиться, как все работает.
+                    </div>
+                </div>
+                <a href="#" class="ask-question-button">
+                    Задать вопрос
+                </a>
         </section>
     </main>
     <script src="js/main.js"></script>
