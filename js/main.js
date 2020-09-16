@@ -16,10 +16,17 @@ function accountSectionRegistrationLink() {
 function accountSectionRegistrationClose() {
     document.querySelector(".registration-showup").classList.toggle("mobile-toggle");
 }
+// Ask Question show
+function askQuestionSectionShow() {
+    document.querySelector(".ask-question-section").classList.toggle("mobile-toggle");
+}
 // Buttons
 window.addEventListener("click", function (event) {
     if (event.target.id === "account_button") {
         accountSectionShow();
+    }
+    if (event.target.id === "askQuestion") {
+        askQuestionSectionShow();
     }
     if (event.target.id === "header_dropdown" || event.target.parentNode.id === "header_dropdown") {
         headerDropdown();

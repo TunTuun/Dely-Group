@@ -8,9 +8,19 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/splide-core.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
 </head>
 
 <body>
+    <div class="ask-question-section mobile-toggle">
+        <div class="authorization-showup__wrapper">
+            <div class="ask-question-wrapper">
+                <div class="ask-question-section__block">
+                    1
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="authorization-showup mobile-toggle">
         <div class="authorization-showup__wrapper">
             <div class="authorization-showup__block authorization-section">
@@ -115,14 +125,14 @@
                 <img src="/img/logotype.png" alt="Логотип">
             </div>
             <div class="nav-wrapper">
-                <nav class="header-nav">
+                <nav class="header-nav" id="headerNavigation">
                     <a href="#" class="header-nav__link">Главная</a>
-                    <a href="#" class="header-nav__link">О компании</a>
-                    <a href="#" class="header-nav__link">О нашей работе</a>
-                    <a href="#" class="header-nav__link">Тарифы</a>
-                    <a href="#" class="header-nav__link">Отзывы</a>
-                    <a href="#" class="header-nav__link">FAQ</a>
-                    <a href="#" class="header-nav__link">Контакты</a>
+                    <a href="#anchor-1" class="header-nav__link">О компании</a>
+                    <a href="#anchor-2" class="header-nav__link">О нашей работе</a>
+                    <a href="#anchor-3" class="header-nav__link">Тарифы</a>
+                    <a href="#anchor-4" class="header-nav__link">Отзывы</a>
+                    <a href="#anchor-5" class="header-nav__link">FAQ</a>
+                    <a href="#anchor-6" class="header-nav__link">Контакты</a>
                 </nav>
                 <div class="account-section">
                     <div class="account-section__button" id="account_button">Личный кабинет</div>
@@ -152,10 +162,10 @@
     <main>
         <section class="proposition-section proposition-section-position container">
             <div class="proposition-section__inner">
-                <div class="proposition-section__img">
+                <div class="proposition-section__img wow animate__animated animate__fadeInLeft">
                     <img src="/img/proposition-img.png" alt="Предложение">
                 </div>
-                <div class="proposition-section__text">
+                <div class="proposition-section__text wow animate__animated animate__fadeInRight">
                     <h1>Деньги должны работать<br>
                         и приносить прибыль!</h1>
                     <button class="proposition-section__button" type="button">
@@ -165,8 +175,9 @@
             </div>
         </section>
         <section class="concept-description concept-description-position container">
+            <div class="anchor anchor__concept" id="anchor-1"></div>
             <div class="concept-description__inner">
-                <div class="concept-description__text">
+                <div class="concept-description__text wow animate__animated animate__fadeInLeft">
                     <h2>Как работает<br>платформа Dely Group?</h2>
                     <p>Наша онлайн-платформа – это микс
                         публичности и приватности. Публичность
@@ -185,40 +196,47 @@
                         Для этого мы создали онлайн-кабинеты для каждого
                         клиента и поддержку 24/7.</p>
                 </div>
-                <div class="concept-description__img">
+                <div class="concept-description__img wow animate__animated animate__fadeInRight">
                     <img src="/img/private-concept.png" alt="Приватность">
                 </div>
             </div>
         </section>
         <section class="work-process work-process-position">
-            <h2>Как с нами заработать?</h2>
+            <div class="anchor anchor__work-process" id="anchor-2"></div>
+            <h2 class="animate__animated animate__fadeIn">Как с нами заработать?</h2>
             <div class="process-sequence">
                 <div class="process-sequence__element">
                     <div class="process-sequence__number">1</div>
-                    <div class="process-sequence__text">Регистрация на платформе</div>
+                    <div class="process-sequence__text wow animate__animated animate__fadeInRight"
+                        style="animation-duration: 0.6s">Регистрация на платформе</div>
                 </div>
                 <div class="process-sequence__element">
                     <div class="process-sequence__number">2</div>
-                    <div class="process-sequence__text">Выбор инвестиционного пакета</div>
+                    <div class="process-sequence__text wow animate__animated animate__fadeInRight"
+                        style="animation-duration: 0.7s">Выбор инвестиционного пакета</div>
                 </div>
                 <div class="process-sequence__element">
                     <div class="process-sequence__number">3</div>
-                    <div class="process-sequence__text">Выбор способа пополнения <br>и вывода средств</div>
+                    <div class="process-sequence__text wow animate__animated animate__fadeInRight"
+                        style="animation-duration: 0.8s">Выбор способа пополнения <br>и вывода средств</div>
                 </div>
                 <div class="process-sequence__element">
                     <div class="process-sequence__number">4</div>
-                    <div class="process-sequence__text">Диверсификация инвестиций через разные пакеты, которые можно
+                    <div class="process-sequence__text wow animate__animated animate__fadeInRight"
+                        style="animation-duration: 0.9s">Диверсификация инвестиций через разные пакеты, которые можно
                         открыть одновременно</div>
                 </div>
                 <div class="process-sequence__element">
                     <div class="process-sequence__number">5</div>
-                    <div class="process-sequence__text">Подсчет собственной прибыли <br>и финансовое планирование
+                    <div class="process-sequence__text wow animate__animated animate__fadeInRight"
+                        style="animation-duration: 1s">Подсчет собственной прибыли <br>и финансовое планирование
                     </div>
                 </div>
             </div>
             <a href="#" class="invest-button">Инвестировать</a>
         </section>
         <section class="rate-slider rate-slider-position container">
+            <div class="anchor anchor__rate-slider" id="anchor-3"></div>
             <h2>Тарифы</h2>
             <div class="rate-slider__inner splide" id="rateSlider">
                 <div class="splide__arrows">
@@ -240,7 +258,7 @@
                                     <div class="rate-element__income-title">
                                         Доходность:
                                     </div>
-                                    <div class="rate-element__income-value">
+                                    <div class="rate-element__income-value wow animate__animated animate__bounceIn">
                                         1.3%
                                     </div>
                                     <div class="rate-element__detailed-info">
@@ -263,7 +281,7 @@
                                     <div class="rate-element__income-title">
                                         Доходность:
                                     </div>
-                                    <div class="rate-element__income-value">
+                                    <div class="rate-element__income-value wow animate__animated animate__bounceIn">
                                         9.86%
                                     </div>
                                     <div class="rate-element__detailed-info">
@@ -286,7 +304,7 @@
                                     <div class="rate-element__income-title">
                                         Доходность:
                                     </div>
-                                    <div class="rate-element__income-value">
+                                    <div class="rate-element__income-value wow animate__animated animate__bounceIn">
                                         20.85%
                                     </div>
                                     <div class="rate-element__detailed-info">
@@ -309,7 +327,7 @@
                                     <div class="rate-element__income-title">
                                         Доходность:
                                     </div>
-                                    <div class="rate-element__income-value">
+                                    <div class="rate-element__income-value wow animate__animated animate__bounceIn">
                                         20.85%
                                     </div>
                                     <div class="rate-element__detailed-info">
@@ -332,7 +350,7 @@
                                     <div class="rate-element__income-title">
                                         Доходность:
                                     </div>
-                                    <div class="rate-element__income-value">
+                                    <div class="rate-element__income-value wow animate__animated animate__bounceIn">
                                         20.85%
                                     </div>
                                     <div class="rate-element__detailed-info">
@@ -351,6 +369,7 @@
             </div>
         </section>
         <section class="review-section container">
+            <div class="anchor anchor__review-section" id="anchor-4"></div>
             <h2 class="review-title">Отзывы</h2>
             <div class="review-slider-wrapper">
                 <div class="splide" id="reviewSlider">
@@ -423,6 +442,7 @@
             </div>
         </section>
         <section class="q-a-section container">
+            <div class="anchor anchor__q-a-section" id="anchor-5"></div>
             <h2>Вопросы и ответы</h2>
             <div class="accordion-wrapper">
                 <div class="accordition-item close">
@@ -430,11 +450,11 @@
                     <h2 class="accordition-item__heading">Как начать зарабатывать?</h2>
                     <div class="accordition-item__content">
                         Для того, чтобы начать работу с компанией Dely Group,
-                            Вам следует пройти простую процедуру регистрации на нашем сайте.
-                            Далее необходимо внести свой первый депозит, выбрав соответствующий
-                            раздел в личном кабинете, после чего вся инвестиционная работа
-                            будет проводиться нашей компанией, а Вы, в свою очередь, будете
-                            получать с этого ежедневный доход.
+                        Вам следует пройти простую процедуру регистрации на нашем сайте.
+                        Далее необходимо внести свой первый депозит, выбрав соответствующий
+                        раздел в личном кабинете, после чего вся инвестиционная работа
+                        будет проводиться нашей компанией, а Вы, в свою очередь, будете
+                        получать с этого ежедневный доход.
                     </div>
                 </div>
                 <div class="accordition-item close">
@@ -442,62 +462,149 @@
                     <h2 class="accordition-item__heading">Какая минимальная и максимальная сумма депозита?</h2>
                     <div class="accordition-item__content">
                         Минимальный размер депозита – 100 рублей. <br>
-                            Максимальный размер депозита – 10 000 000 рублей.
+                        Максимальный размер депозита – 10 000 000 рублей.
                     </div>
                 </div>
                 <div class="accordition-item close">
                     <div class="accordition-item__arrow"></div>
                     <h2 class="accordition-item__heading">Какие существуют риски?</h2>
                     <div class="accordition-item__content">
-                            Риски в инвестиции присутствуют всегда. Но речь идет о том, чтобы 
-                            этот риск был не просто оправдан, а о сведении его к минимуму. 
-                            Именно на это нацелены мы, наша бизнес-модель. Стратегия 
-                            минимизации рисков предусматривает сразу несколько компонентов: <br><br>
-                            
-                            <span>первый</span> – это команда аналитиков, которая отвечает за проект и
-                            постоянно работает с рисками разного уровня, как краткосрочными, 
-                            так и долгосрочными; <br><br>
-                            
-                            <span>второй</span> – у нас есть отдельная стратегия инвестирования (5 критериев), 
-                            которая также предусматривает минимизацию рисков именно в этом 
-                            направлении; <br><br>
-                            
-                            <span>третий</span> – диверсификация в работе, в первую очередь – инвестиций. 
-                            Мы четко держим баланс между краткосрочными инвестициями, 
-                            которые должны принести прибыль уже в ближайшей перспективе, и 
-                            долгосрочными инвестициями, которые служат для нас почвой для 
-                            стабильности и стратегического развития. Проще говоря, если у нас
-                            возникнут какие-либо финансовые сложности с одним стартапом, то мы 
-                            сможем это компенсировать прибылью с других. <br><br>
-                            
-                            <span>четвертый</span> – проект Dely основан на личных инвестициях его 
-                            собственников, которые являются также учредителями компании. 
-                            Эти средства составляют 100% первичных инвестиций Dely в 
-                            стартапы, и, согласно документам компании, процент собственников в 
-                            операционной инвестиционной деятельности никогда не должен 
-                            составлять меньше 51% от общей суммы инвестиций, которые компания 
-                            может привлечь. Таким образом, учредители нашей компании не просто 
-                            являются гарантами ее деятельности, но и обеспечивают стабильность 
-                            выплат для инвесторов, гарантируя их инвестиции своими. <br><br>
-                            
-                            <span>пятый</span> – мы постоянно ведем переговоры не только с новыми стартапами, 
-                            но также с инвестиционными и венчурными фондами, стартап-инкубаторами 
-                            и большими компаниями, в которых есть интерес в IT, чтобы привлечь их к 
-                            сотрудничеству, в том числе на уровне финансовой поддержки – кредитной, 
-                            инвестиционной, а в перспективе возможно и IPO. <br><br>
-                            
-                            Все это отображено также в нашей бизнес-модели и ежедневной работе, 
-                            поэтому следите за проектом и становитесь нашим инвестором, чтобы 
-                            лично убедиться, как все работает.
+                        Риски в инвестиции присутствуют всегда. Но речь идет о том, чтобы
+                        этот риск был не просто оправдан, а о сведении его к минимуму.
+                        Именно на это нацелены мы, наша бизнес-модель. Стратегия
+                        минимизации рисков предусматривает сразу несколько компонентов: <br><br>
+
+                        <span>первый</span> – это команда аналитиков, которая отвечает за проект и
+                        постоянно работает с рисками разного уровня, как краткосрочными,
+                        так и долгосрочными; <br><br>
+
+                        <span>второй</span> – у нас есть отдельная стратегия инвестирования (5 критериев),
+                        которая также предусматривает минимизацию рисков именно в этом
+                        направлении; <br><br>
+
+                        <span>третий</span> – диверсификация в работе, в первую очередь – инвестиций.
+                        Мы четко держим баланс между краткосрочными инвестициями,
+                        которые должны принести прибыль уже в ближайшей перспективе, и
+                        долгосрочными инвестициями, которые служат для нас почвой для
+                        стабильности и стратегического развития. Проще говоря, если у нас
+                        возникнут какие-либо финансовые сложности с одним стартапом, то мы
+                        сможем это компенсировать прибылью с других. <br><br>
+
+                        <span>четвертый</span> – проект Dely основан на личных инвестициях его
+                        собственников, которые являются также учредителями компании.
+                        Эти средства составляют 100% первичных инвестиций Dely в
+                        стартапы, и, согласно документам компании, процент собственников в
+                        операционной инвестиционной деятельности никогда не должен
+                        составлять меньше 51% от общей суммы инвестиций, которые компания
+                        может привлечь. Таким образом, учредители нашей компании не просто
+                        являются гарантами ее деятельности, но и обеспечивают стабильность
+                        выплат для инвесторов, гарантируя их инвестиции своими. <br><br>
+
+                        <span>пятый</span> – мы постоянно ведем переговоры не только с новыми стартапами,
+                        но также с инвестиционными и венчурными фондами, стартап-инкубаторами
+                        и большими компаниями, в которых есть интерес в IT, чтобы привлечь их к
+                        сотрудничеству, в том числе на уровне финансовой поддержки – кредитной,
+                        инвестиционной, а в перспективе возможно и IPO. <br><br>
+
+                        Все это отображено также в нашей бизнес-модели и ежедневной работе,
+                        поэтому следите за проектом и становитесь нашим инвестором, чтобы
+                        лично убедиться, как все работает.
                     </div>
                 </div>
-                <a href="#" class="ask-question-button">
+                <a class="ask-question-button" id="askQuestion">
                     Задать вопрос
                 </a>
         </section>
+        <section class="map" id="anchor-6">
+            <div class="mapframe-wrapper"><a
+                    href="https://yandex.ua/maps/org/mfk_bashnya_federatsiya/1335494807/?utm_medium=mapframe&utm_source=maps"
+                    style="color:#eee;font-size:12px;position:absolute;top:0px;">МФК Башня Федерация</a><a
+                    href="https://yandex.ua/maps/213/moscow/category/housing_complex/?utm_medium=mapframe&utm_source=maps"
+                    style="color:#eee;font-size:12px;position:absolute;top:0px;">МФК Башня Федерация</a><a
+                    href="https://yandex.ua/maps/213/moscow/category/housing_complex/?utm_medium=mapframe&utm_source=maps"
+                    class="link-mapframe">МФК Башня Федерация</a><a
+                    href="https://yandex.by/maps/213/moscow/category/housing_complex/?utm_medium=mapframe&utm_source=maps"
+                    style="color:#eee;font-size:12px;position:absolute;top:14px;">Жилой комплекс в Москве</a><iframe
+                    src="https://yandex.ua/map-widget/v1/-/CCQxfMd6~B" frameborder="1" allowfullscreen="true"
+                    class="mapframe"></iframe></div>
+            <div class="map__contacts">
+                <h2>Контакты</h2>
+                <span>г. Москва, БЦ «Башня Федерация»,<br>
+                    Пресненская набережная, 12</span>
+                <span>+7(495) 032 22 22 <br> suportdelygroup@gmail.com</span>
+            </div>
+        </section>
+        <footer class="container">
+            <div class="link-list-wrapper">
+                <ul class="link-list">
+                    <li class="link-list__element">
+                        Контакты
+                    </li>
+                    <li class="link-list__element">
+                        <a href="#">+7 (495) 032 22 22</a>
+                    </li>
+                    <li class="link-list__element">
+                        <a href="#">suportdelygroup@gmail.com</a>
+                    </li>
+                </ul>
+                <ul class="link-list">
+                    <li class="link-list__element">
+                        О нашей работе
+                    </li>
+                    <li class="link-list__element">
+                        <a href="#">Как мы работаем?</a>
+                    </li>
+                    <li class="link-list__element">
+                        <a href="#">Как с нами заработать?</a>
+                    </li>
+                </ul>
+                <ul class="link-list">
+                    <li class="link-list__element">
+                        Информация
+                    </li>
+                    <li class="link-list__element">
+                        <a href="#">О компании</a>
+                    </li>
+                </ul>
+                <ul class="link-list">
+                    <li class="link-list__element">
+                        Помощь
+                    </li>
+                    <li class="link-list__element">
+                        <a href="#">Тарифы</a>
+                    </li>
+                    <li class="link-list__element">
+                        <a href="#">Отзывы</a>
+                    </li>
+                    <li class="link-list__element">
+                        <a href="#">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="social wow animate__animated animate__pulse">
+                <a href="#"><img src="/img/vk.png" alt="VK"></a>
+                <a href="#"><img src="/img/telegram.png" alt="Telegram"></a>
+                <a href="#"><img src="/img/youtube.png" alt="Youtube"></a>
+            </div>
+        </footer>
     </main>
     <script src="js/main.js"></script>
     <script src="js/splide.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+        const anchors = document.querySelectorAll('a[href*="#"]')
+        for (let anchor of anchors) {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault()
+                const blockID = anchor.getAttribute('href').substr(1)
+                document.getElementById(blockID).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                })
+            })
+        }
+    </script>
 </body>
 
 </html>
