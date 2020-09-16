@@ -13,11 +13,26 @@
 
 <body>
     <div class="ask-question-section mobile-toggle">
-        <div class="authorization-showup__wrapper">
-            <div class="ask-question-wrapper">
-                <div class="ask-question-section__block">
-                    1
-                </div>
+        <div class="ask-question-section__wrapper">
+            <div class="ask-question-section__block">
+                <button class="ask-question-section__close">
+                    <img src="/img/close-dialog.png" alt="Закрыть" id="closeDialogAskQuestion">
+                </button>
+                <span class="authorization-section__title ask-question-section__title">Задайте вопрос</span>
+                <textarea placeholder="Введите текст" name="userQuestion" id="userQuestion" class="ask-question-section__textarea"></textarea>
+                <button type="submit" class="ask-question-section__submit">Отправить</button>
+            </div>
+        </div>
+    </div>
+    <div class="ask-question-section review-modal mobile-toggle">
+        <div class="ask-question-section__wrapper">
+            <div class="ask-question-section__block">
+                <button class="ask-question-section__close">
+                    <img src="/img/close-dialog.png" alt="Закрыть" id="closeDialogSendReview">
+                </button>
+                <span class="authorization-section__title ask-question-section__title">Отправьте Ваш отзыв</span>
+                <textarea placeholder="Введите текст" name="userReview" id="userReview" class="ask-question-section__textarea"></textarea>
+                <button type="submit" class="ask-question-section__submit">Опубликовать</button>
             </div>
         </div>
     </div>
@@ -54,7 +69,7 @@
                     <label class="remember-checkbox-custom" for="remember-checkbox"></label>
                     <span class="remember-checkbox-label">Запомнить меня</span>
                 </div>
-                <button class="authorization-section__login">
+                <button type="submit" class="authorization-section__login">
                     Войти
                 </button>
             </div>
@@ -113,7 +128,7 @@
                 </div>
                 <span class="license-agreement">Нажимая "Зарегистрироваться" Вы соглашаетесь с условиями использования
                     сервиса Delay Systems</span>
-                <button class="authorization-section__login  authorization-section__login-registration">
+                <button type="submit" class="authorization-section__login  authorization-section__login-registration">
                     Зарегистрироваться
                 </button>
             </div>
@@ -435,8 +450,8 @@
                     </div>
                 </div>
                 <div class="review-selection">
-                    <a href="#" class="review-selection__button review-selection__button-picked">Оставить
-                        комментарий</a>
+                    <div class="review-selection__button review-selection__button-picked" id="sendReview">Оставить
+                        комментарий</div>
                     <a href="#" class="review-selection__button">Все комментарии</a>
                 </div>
             </div>

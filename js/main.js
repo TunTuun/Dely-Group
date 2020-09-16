@@ -20,12 +20,25 @@ function accountSectionRegistrationClose() {
 function askQuestionSectionShow() {
     document.querySelector(".ask-question-section").classList.toggle("mobile-toggle");
 }
+// Review show
+function reviewSectionShow() {
+    document.querySelector(".review-modal").classList.toggle("mobile-toggle");
+}
 // Buttons
 window.addEventListener("click", function (event) {
     if (event.target.id === "account_button") {
         accountSectionShow();
     }
     if (event.target.id === "askQuestion") {
+        askQuestionSectionShow();
+    }
+    if (event.target.id === "sendReview") {
+        reviewSectionShow();
+    }
+    if (event.target.id === "closeDialogSendReview") {
+        reviewSectionShow();
+    }
+    if (event.target.id === "closeDialogAskQuestion") {
         askQuestionSectionShow();
     }
     if (event.target.id === "header_dropdown" || event.target.parentNode.id === "header_dropdown") {
