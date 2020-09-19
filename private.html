@@ -24,7 +24,27 @@
                     <a href="#" class="header-nav__link">Отзывы</a>
                 </nav>
                 <div class="account-section">
-                    <div class="account-section__button">Здравствуйте, <span>Вася</span> <img class="" src="/img/privateHeaderDropdown.png" alt="Открыть"></div>
+                    <div class="account-section__button" id="accountSection">Здравствуйте, 
+                        <span>Вася</span>
+                        <img src="/img/privateHeaderDropdown.png" alt="Открыть">
+                    </div>
+                </div>
+            </div>
+            <div id="accountSectionDropdown" class="account-section-dropdown dropdown-toggle">
+                <div class="account-section-dropdown__element">
+                    Создать депозит
+                </div>
+                <div class="account-section-dropdown__element">
+                    Пополнить баланс
+                </div>
+                <div class="account-section-dropdown__element">
+                    Вывести средства
+                </div>
+                <div class="account-section-dropdown__element">
+                    Партнёрская программа
+                </div>
+                <div class="account-section-dropdown__element">
+                    Выйти с аккаунта
                 </div>
             </div>
         </div>
@@ -121,10 +141,10 @@
                         <div class="rate-pick__title">
                             Вклад «на 24 часа»
                         </div>
-                        <div class="rate-pick__desciption">
+                        <div class="rate-pick__description">
                             1.3% ставка в день
                         </div>
-                        <div class="rate-pick__desciption">
+                        <div class="rate-pick__description">
                             Возврат депозита через 24 часа
                         </div>
                     </div>
@@ -132,18 +152,169 @@
                         <div class="rate-pick__title">
                             Вклад «на 24 часа»
                         </div>
-                        <div class="rate-pick__desciption">
+                        <div class="rate-pick__description">
                             1.3% ставка в день
                         </div>
-                        <div class="rate-pick__desciption">
+                        <div class="rate-pick__description">
+                            Возврат депозита через 24 часа
+                        </div>
+                        <div class="rate-pick__description">
+                            Возврат депозита через 24 часа
+                        </div>
+                    </div>
+                    <div class="rate-pick__element">
+                        <div class="rate-pick__title">
+                            Вклад «на 24 часа»
+                        </div>
+                        <div class="rate-pick__description">
+                            1.3% ставка в день
+                        </div>
+                        <div class="rate-pick__description">
+                            Возврат депозита через 24 часа
+                        </div>
+                        <div class="rate-pick__description">
+                            Возврат депозита через 24 часа
+                        </div>
+                    </div>
+                    <div class="rate-pick__element">
+                        <div class="rate-pick__title">
+                            Вклад «на 24 часа»
+                        </div>
+                        <div class="rate-pick__description">
+                            1.3% ставка в день
+                        </div>
+                        <div class="rate-pick__description">
+                            Возврат депозита через 24 часа
+                        </div>
+                        <div class="rate-pick__description">
                             Возврат депозита через 24 часа
                         </div>
                     </div>
                 </div>
                 <div class="rate-section">
-                    2
+                    <div class="rate-section__rate">
+                        <div class="rate-section__header-wrapper">
+                            <div class="rate-section__header">
+                                Тариф «на 28 дней»
+                            </div>
+                            <div class="rate-section__header">
+                                <span>Доходность:</span> 1.3% в день
+                            </div>
+                        </div>
+                        <div class="rate-section__title">
+                            Доступные средства:
+                        </div>
+                        <div class="rate-section__available-money_wrapper">
+                            <div class="rate-section__available-money">
+                                0.0
+                                <span>₽</span>
+                            </div>
+                        </div>
+                        <div class="rate-section__title">
+                            Введите сумму депозита:
+                        </div>
+                        <div class="rate-section__deposit-wrapper">
+                            <input class="rate-section__input" type="text" placeholder="Сумма 0.00">
+                            <div class="rate-section__input-currency">
+                                ₽
+                            </div>
+                        </div>
+                        <div class="rate-section__deposit-rule">
+                            Вы можете вложить от 100 ₽ до 10 000 000 ₽
+                        </div>
+                        <div class="rate-section__deposit-submit-wrapper">
+                            <button class="rate-section__deposit-submit-button">
+                                Создать депозит
+                            </button>
+                        </div>
+                        <div class="rate-section__separator"></div>
+                        <div class="rate-section__title">
+                            Персональная информация по депозиту
+                        </div>
+                        <div class="rate-section__personal-info-wrapper">
+                            <div class="rate-section__personal-info-block">
+                                <div class="rate-section__personal-info-element">
+                                    <div
+                                        class="rate-section__personal-info-value-title rate-section__personal-info-value-title_l">
+                                        Сумма депозита
+                                    </div>
+                                    <div class="rate-section__personal-info-value">
+                                        0.00 <span>₽</span>
+                                    </div>
+                                </div>
+                                <div class="rate-section__personal-info-element">
+                                    <div
+                                        class="rate-section__personal-info-value-title rate-section__personal-info-value-title_l">
+                                        Начисленная прибыль
+                                    </div>
+                                    <div class="rate-section__personal-info-value">
+                                        0.00 <span>₽</span>
+                                    </div>
+                                </div>
+                                <div class="rate-section__personal-info-element">
+                                    <div
+                                        class="rate-section__personal-info-value-title rate-section__personal-info-value-title_l">
+                                        Сумма на выходе
+                                    </div>
+                                    <div class="rate-section__personal-info-value">
+                                        0.00 <span>₽</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rate-section__personal-info-block">
+                                <div class="rate-section__personal-info-element">
+                                    <div
+                                        class="rate-section__personal-info-value-title rate-section__personal-info-value-title_r">
+                                        Ставка:
+                                    </div>
+                                    <div class="rate-section__personal-info-value">
+                                        1.3%<span> в день</span>
+                                    </div>
+                                </div>
+                                <div class="rate-section__personal-info-element">
+                                    <div
+                                        class="rate-section__personal-info-value-title rate-section__personal-info-value-title_r">
+                                        Бонус
+                                    </div>
+                                    <div class="rate-section__personal-info-value">
+                                        Нет
+                                    </div>
+                                </div>
+                                <div class="rate-section__personal-info-element">
+                                    <div
+                                        class="rate-section__personal-info-value-title rate-section__personal-info-value-title_r">
+                                        Капитализация процентов:
+                                    </div>
+                                    <div class="rate-section__personal-info-value">
+                                        Нет
+                                    </div>
+                                </div>
+                                <div class="rate-section__personal-info-element">
+                                    <div
+                                        class="rate-section__personal-info-value-title rate-section__personal-info-value-title_r">
+                                        Ограничение по количеству
+                                        активных инвестиций:
+                                    </div>
+                                    <div class="rate-section__personal-info-value">
+                                        Отсутствуют
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rate-section__footer">
+                            Тело инвестиции возвращается после завершения инвестиционного периода. Первое начисление для
+                            тарифных планов
+                            «на 7 дней», «на 14 дней», «на 28 дней» происходит через 24 часа после создания депозита,
+                            для тарифного плана
+                            «на 24 часа» начисление происходит моментально.
+                        </div>
+                    </div>
                 </div>
             </div>
+            <footer class="rate-footer">
+                <span class="trademark">Copyright © 2020 Dely Group. Все права защищены.</span>
+                <a class="agreement" href="#">Клиентское соглашение</a>
+            </footer>
         </div>
     </section>
     </main>

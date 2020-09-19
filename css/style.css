@@ -176,6 +176,10 @@ p {
   display: none !important;
 }
 
+.dropdown-toggle {
+  display: none !important;
+}
+
 section {
   position: relative;
 }
@@ -323,7 +327,7 @@ header {
   display: inline-block;
   position: absolute;
   left: -17px;
-  top: -2px;
+  top: -6px;
   width: 4px;
   height: 34px;
   background: #ffee00;

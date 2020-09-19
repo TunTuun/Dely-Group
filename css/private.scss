@@ -15,13 +15,45 @@ body {
     font-family: "SF-Pro-Display";
 }
 
+.header-wrapper {
+    position: relative;
+}
+
 .account-section {
+    position: relative;
     &__button {
         display: flex;
+        align-items: center;
         & > img {
             margin-top: 3px;
             margin-left: 10px;
             height: 100%;
+        }
+    }
+}
+
+.account-section-dropdown {
+    position: absolute;
+    top: 111px;
+    right: 0;
+    width: 367px;
+    padding: 53px;
+    z-index: 5;
+    box-sizing: border-box;
+    border-radius: 0px 0px 0px 10px;
+    background-color: $darkblue_;
+    display: flex;
+    flex-direction: column;
+    &__element {
+        margin-bottom: 36px;
+        cursor: pointer;
+        font-size: 18px;
+        color: $white_;
+        &:hover {
+            color: $yellow_;
+        }
+        &:last-child {
+            margin-top: 61px;
         }
     }
 }
@@ -58,6 +90,9 @@ body {
         list-style: none;
         padding: 0;
         margin: 0;
+        @media (max-width: 1600px) {
+            width: 80%;
+        }
     }
     &__element {
         margin-top: 40px;
@@ -179,6 +214,7 @@ body {
 }
 .rate-wrapper {
     display: flex;
+    justify-content: space-between;
 }
 
 .rate-pick {
@@ -186,17 +222,253 @@ body {
     display: flex;
     flex-direction: column;
     &__header {
+        margin-bottom: 42px;
         font-weight: normal;
         font-size: 28px;
     }
     &__element {
+        margin-bottom: 26px;
         width: 475px;
         height: 227px;
+        padding: 32px 55px 39px 55px;
         border: 2px solid $yellow_;
+        cursor: pointer;
         box-sizing: border-box;
         border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        &_active {
+            background-color: $yellow_;
+        }
+    }
+    &__title {
+        margin-bottom: 25px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 28px;
+    }
+    &__description {
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        font-size: 20px;
+        &:before {
+            content: "";
+            display: inline-block;
+            height: 28px;
+            width: 4px;
+            margin-right: 10px;
+            background-color: $yellow_;
+        }
+        &_active {
+            &:before {
+                background-color: #000000;
+            }
+        }
     }
 }
 
 .rate-section {
+    width: 100%;
+    margin-top: 113px;
+    margin-left: 27px;
+    border-radius: 10px;
+    &__rate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        background: rgba(196, 196, 196, 0.17);
+    }
+    &__header-wrapper {
+        height: 91px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 62px;
+        padding: 0 45px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px 10px 0 0;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    &__header {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        font-size: 24px;
+        & > span {
+            margin-right: 8px;
+            font-weight: normal;
+            font-size: 18px;
+        }
+    }
+    &__title {
+        text-align: center;
+        font-weight: 500;
+        font-size: 24px;
+    }
+    &__available-money {
+        &_wrapper {
+            max-width: 628px;
+            width: 100%;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+        width: 100%;
+        height: 106px;
+        margin: 14px 0 37px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: normal;
+        color: $yellow_;
+        font-size: 50px;
+        background-color: $darkblue_;
+        box-shadow: 0px 4px 20px $opacity;
+        border-radius: 10px;
+    }
+    &__deposit-wrapper {
+        margin-top: 12px;
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+    }
+    &__input {
+        max-width: 628px;
+        width: 100%;
+        height: 67px;
+        border: 1px solid #070735;
+        box-sizing: border-box;
+        border-radius: 10px 0 0 10px;
+        border-right-width: 0px;
+        padding-left: 30px;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        &-currency {
+            width: 76px;
+            height: 67px;
+            border-radius: 0px 10px 10px 0px;
+            color: $white_;
+            font-size: 36px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $darkblue_;
+        }
+    }
+    &__deposit-rule {
+        margin-top: 6px;
+        font-size: 14px;
+        text-align: center;
+    }
+    &__deposit-submit-wrapper {
+        margin-top: 32px;
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+    }
+    &__deposit-submit-button {
+        max-width: 314px;
+        width: 100%;
+        height: 54px;
+        background-color: $yellow_;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        color: $darkblue_;
+        font-weight: 600;
+        font-size: 22px;
+        &:hover {
+            box-shadow: 0px 1px 20px rgba(255, 238, 0, 0.5);
+        }
+    }
+    &__separator {
+        margin-top: 77px;
+        margin-bottom: 69px;
+        width: 78%;
+        height: 2px;
+        background-color: $darkblue_;
+        opacity: 0.8;
+    }
+    &__personal-info-wrapper {
+        width: 100%;
+        margin-top: 30px;
+        padding: 0 7%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__personal-info-block {
+        width: 43%;
+        display: flex;
+        flex-direction: column;
+    }
+    &__personal-info-element {
+        margin-top: 20px;
+    }
+    &__personal-info-value-title {
+        font-size: 22px;
+        display: flex;
+        align-items: center;
+        &_l {
+            &:before {
+                content: url("/img/infoArrowDark.png");
+                margin-right: 10px;
+            }
+        }
+        &_r {
+            &:before {
+                content: url("/img/infoArrowYellow.png");
+                margin-right: 10px;
+            }
+        }
+    }
+    &__personal-info-value {
+        margin-top: 6px;
+        margin-left: 24px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    &__footer {
+        height: 98px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 60px;
+        padding: 0 45px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        font-size: 14px;
+        line-height: 17px;
+        border-radius: 0 0 10px 10px;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
+.rate-footer {
+    width: 100%;
+    padding: 0 60px;
+    box-sizing: border-box;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trademark {
+    font-size: 14px;
+    opacity: 0.5;
+}
+
+.agreement {
+    font-size: 22px;
+    opacity: 0.5;
 }

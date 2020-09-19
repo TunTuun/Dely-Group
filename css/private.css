@@ -176,6 +176,10 @@ p {
   display: none !important;
 }
 
+.dropdown-toggle {
+  display: none !important;
+}
+
 section {
   position: relative;
 }
@@ -323,7 +327,7 @@ header {
   display: inline-block;
   position: absolute;
   left: -17px;
-  top: -2px;
+  top: -6px;
   width: 4px;
   height: 34px;
   background: #ffee00;
@@ -398,16 +402,62 @@ body {
   font-family: "SF-Pro-Display";
 }
 
+.header-wrapper {
+  position: relative;
+}
+
+.account-section {
+  position: relative;
+}
+
 .account-section__button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .account-section__button > img {
   margin-top: 3px;
   margin-left: 10px;
   height: 100%;
+}
+
+.account-section-dropdown {
+  position: absolute;
+  top: 111px;
+  right: 0;
+  width: 367px;
+  padding: 53px;
+  z-index: 5;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 0px 0px 0px 10px;
+  background-color: #070735;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.account-section-dropdown__element {
+  margin-bottom: 36px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.account-section-dropdown__element:hover {
+  color: #ffee00;
+}
+
+.account-section-dropdown__element:last-child {
+  margin-top: 61px;
 }
 
 .private-container-wrapper {
@@ -457,6 +507,12 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+@media (max-width: 1600px) {
+  .side-menu__list {
+    width: 80%;
+  }
 }
 
 .side-menu__element {
@@ -634,6 +690,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .rate-pick {
@@ -648,16 +707,366 @@ body {
 }
 
 .rate-pick__header {
+  margin-bottom: 42px;
   font-weight: normal;
   font-size: 28px;
 }
 
 .rate-pick__element {
+  margin-bottom: 26px;
   width: 475px;
   height: 227px;
+  padding: 32px 55px 39px 55px;
   border: 2px solid #ffee00;
+  cursor: pointer;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.rate-pick__element_active {
+  background-color: #ffee00;
+}
+
+.rate-pick__title {
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.rate-pick__description {
+  margin-bottom: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  font-size: 20px;
+}
+
+.rate-pick__description:before {
+  content: "";
+  display: inline-block;
+  height: 28px;
+  width: 4px;
+  margin-right: 10px;
+  background-color: #ffee00;
+}
+
+.rate-pick__description_active:before {
+  background-color: #000000;
+}
+
+.rate-section {
+  width: 100%;
+  margin-top: 113px;
+  margin-left: 27px;
+  border-radius: 10px;
+}
+
+.rate-section__rate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(196, 196, 196, 0.17);
+}
+
+.rate-section__header-wrapper {
+  height: 91px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 62px;
+  padding: 0 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px 10px 0 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.rate-section__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.rate-section__header > span {
+  margin-right: 8px;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.rate-section__title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.rate-section__available-money {
+  width: 100%;
+  height: 106px;
+  margin: 14px 0 37px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: normal;
+  color: #ffee00;
+  font-size: 50px;
+  background-color: #070735;
+  -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.rate-section__available-money_wrapper {
+  max-width: 628px;
+  width: 100%;
+  padding: 0 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.rate-section__deposit-wrapper {
+  margin-top: 12px;
+  width: 100%;
+  padding: 0 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.rate-section__input {
+  max-width: 628px;
+  width: 100%;
+  height: 67px;
+  border: 1px solid #070735;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px 0 0 10px;
+  border-right-width: 0px;
+  padding-left: 30px;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.rate-section__input-currency {
+  width: 76px;
+  height: 67px;
+  border-radius: 0px 10px 10px 0px;
+  color: #ffffff;
+  font-size: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #070735;
+}
+
+.rate-section__deposit-rule {
+  margin-top: 6px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.rate-section__deposit-submit-wrapper {
+  margin-top: 32px;
+  width: 100%;
+  padding: 0 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.rate-section__deposit-submit-button {
+  max-width: 314px;
+  width: 100%;
+  height: 54px;
+  background-color: #ffee00;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  color: #070735;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.rate-section__deposit-submit-button:hover {
+  -webkit-box-shadow: 0px 1px 20px rgba(255, 238, 0, 0.5);
+          box-shadow: 0px 1px 20px rgba(255, 238, 0, 0.5);
+}
+
+.rate-section__separator {
+  margin-top: 77px;
+  margin-bottom: 69px;
+  width: 78%;
+  height: 2px;
+  background-color: #070735;
+  opacity: 0.8;
+}
+
+.rate-section__personal-info-wrapper {
+  width: 100%;
+  margin-top: 30px;
+  padding: 0 7%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.rate-section__personal-info-block {
+  width: 43%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.rate-section__personal-info-element {
+  margin-top: 20px;
+}
+
+.rate-section__personal-info-value-title {
+  font-size: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.rate-section__personal-info-value-title_l:before {
+  content: url("/img/infoArrowDark.png");
+  margin-right: 10px;
+}
+
+.rate-section__personal-info-value-title_r:before {
+  content: url("/img/infoArrowYellow.png");
+  margin-right: 10px;
+}
+
+.rate-section__personal-info-value {
+  margin-top: 6px;
+  margin-left: 24px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.rate-section__footer {
+  height: 98px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 60px;
+  padding: 0 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: 14px;
+  line-height: 17px;
+  border-radius: 0 0 10px 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.rate-footer {
+  width: 100%;
+  padding: 0 60px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.trademark {
+  font-size: 14px;
+  opacity: 0.5;
+}
+
+.agreement {
+  font-size: 22px;
+  opacity: 0.5;
 }
 /*# sourceMappingURL=private.css.map */
