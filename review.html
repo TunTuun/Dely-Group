@@ -1,0 +1,305 @@
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Delay Systems</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/splide-core.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+</head>
+
+<body>
+    <div class="authorization-showup mobile-toggle">
+        <div class="authorization-showup__wrapper">
+            <div class="authorization-showup__block authorization-section">
+                <button class="authorization-showup__close">
+                    <img src="/img/close-dialog.png" alt="Закрыть" id="close_dialog_authorization">
+                </button>
+                <span class="authorization-section__title">Вход</span>
+                <span class="authorization-section__registration-message">Нет аккаунта? <a
+                        class="authorization-section__registration-link"
+                        id="link_registration">Зарегистрироваться</a></span>
+                <div class="input-field-wrapper input-field-wrapper-position">
+                    <div class="input-field">
+                        <span class="input-field__title">
+                            Логин
+                        </span>
+                        <input type="text" placeholder="Ваш логин">
+                    </div>
+                    <div class="input-field">
+                        <a href="#" class="input-field__forgot-password">Забыли пароль?</a>
+                        <span class="input-field__title">
+                            Пароль
+                        </span>
+                        <input type="password" placeholder="Ваш пароль">
+                    </div>
+                </div>
+                <div class="authorization-error-message message-toggle">
+                    Неверный логин или пароль
+                </div>
+                <div class="remember-checkbox-wrapper">
+                    <input type="checkbox" id="remember-checkbox" name="remember-checkbox" class="remember-checkbox">
+                    <label class="remember-checkbox-custom" for="remember-checkbox"></label>
+                    <span class="remember-checkbox-label">Запомнить меня</span>
+                </div>
+                <button type="submit" class="authorization-section__login">
+                    Войти
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="authorization-showup registration-showup mobile-toggle">
+        <div class="authorization-showup__wrapper">
+            <div class="authorization-showup__block authorization-section">
+                <button class="authorization-showup__close">
+                    <img src="/img/close-dialog.png" alt="Закрыть" id="close_dialog_registration">
+                </button>
+                <span class="authorization-section__title">Регистрация</span>
+                <span class="authorization-section__registration-message">Уже есть аккаунт? <a
+                        class="authorization-section__registration-link"
+                        id="link_autorization">Авторизоваться</a></span>
+                <div class="input-field-wrapper input-field-wrapper-position">
+                    <div class="input-field input-field-registration">
+                        <span class="input-field__title">
+                            Логин
+                        </span>
+                        <input type="text" placeholder="Ваш логин">
+                    </div>
+                    <div class="input-field input-field-registration">
+                        <span class="input-field__title">
+                            E-mail
+                        </span>
+                        <input type="text" placeholder="Ваш E-mail">
+                    </div>
+                    <div class="input-field input-field-registration">
+                        <span class="input-field__title">
+                            Пароль
+                        </span>
+                        <input type="password" placeholder="Ваш пароль">
+                    </div>
+                    <div class="input-field input-field-registration">
+                        <span class="input-field__title">
+                            Имя
+                        </span>
+                        <input type="text" placeholder="Ваше имя">
+                    </div>
+                    <div class="input-field input-field-registration">
+                        <span class="input-field__title">
+                            Фамилия
+                        </span>
+                        <input type="text" placeholder="Ваша фамилия">
+                    </div>
+                </div>
+                <div class="authorization-error-message message-toggle">
+                    Неверно заполнены поля
+                </div>
+                <div class="remember-checkbox-wrapper remember-checkbox-wrapper-registration">
+                    <input type="checkbox" id="accept-checkbox" name="accept-checkbox" class="remember-checkbox">
+                    <label class="remember-checkbox-custom" for="accept-checkbox"></label>
+                    <span class="remember-checkbox-label">Я согласен с условиями использования сервиса Delay
+                        Systems</span>
+                </div>
+                <span class="license-agreement">Нажимая "Зарегистрироваться" Вы соглашаетесь с условиями использования
+                    сервиса Delay Systems</span>
+                <button type="submit" class="authorization-section__login  authorization-section__login-registration">
+                    Зарегистрироваться
+                </button>
+            </div>
+        </div>
+    </div>
+    <header>
+        <div class="header-wrapper">
+            <div class="logotype">
+                <img src="/img/logotype.png" alt="Логотип">
+            </div>
+            <div class="nav-wrapper">
+                <nav class="header-nav" id="headerNavigation">
+                    <a href="#" class="header-nav__link">Главная</a>
+                    <a href="#anchor-1" class="header-nav__link">О компании</a>
+                    <a href="#anchor-2" class="header-nav__link">О нашей работе</a>
+                    <a href="#anchor-3" class="header-nav__link">Тарифы</a>
+                    <a href="#anchor-4" class="header-nav__link">Отзывы</a>
+                    <a href="#anchor-5" class="header-nav__link">FAQ</a>
+                    <a href="#anchor-6" class="header-nav__link">Контакты</a>
+                </nav>
+                <div class="account-section">
+                    <div class="account-section__button" id="account_button">Личный кабинет</div>
+                    <div class="account-section__menu" id="header_dropdown">
+                        <img src="/img/burger.png" alt="Меню">
+                        <div class="account-section__dropdown-text">
+                            Меню
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="header-dropdown mobile-toggle">
+        <div class="nav-wrapper nav-wrapper-mobile">
+            <nav class="header-nav">
+                <a href="#" class="header-nav__link">Главная</a>
+                <a href="#" class="header-nav__link">О компании</a>
+                <a href="#" class="header-nav__link">О нашей работе</a>
+                <a href="#" class="header-nav__link">Тарифы</a>
+                <a href="#" class="header-nav__link">Отзывы</a>
+                <a href="#" class="header-nav__link">FAQ</a>
+                <a href="#" class="header-nav__link">Контакты</a>
+            </nav>
+        </div>
+    </div>
+    <main>
+        <section class="review-page">
+            <h1 class="review-page__header">Отзывы</h1>
+            <div class="review-page__element">
+                <div class="review-page__avatar">
+                    <img src="/img/avatar.png" alt="Аватар">
+                </div>
+                <div class="review-page__element-inner">
+                    <div class="review-page__name">
+                        Вася Пупкин
+                    </div>
+                    <div class="review-page__review-text">
+                        Dely Group отличный способ разумно вложить свои сбережения. Поддержка 24/7,
+                        отличные специалисты. <br>
+                        Отлично! Советую!
+                    </div>
+                </div>
+            </div>
+            <div class="review-page__element">
+                <div class="review-page__avatar">
+                    <img src="/img/avatar.png" alt="Аватар">
+                </div>
+                <div class="review-page__element-inner">
+                    <div class="review-page__name">
+                        Вася Пупкин
+                    </div>
+                    <div class="review-page__review-text">
+                        Dely Group отличный способ разумно вложить свои сбережения. Поддержка 24/7,
+                        отличные специалисты. <br>
+                        Отлично! Советую!
+                    </div>
+                </div>
+            </div>
+            <div class="review-page__element">
+                <div class="review-page__avatar">
+                    <img src="/img/avatar.png" alt="Аватар">
+                </div>
+                <div class="review-page__element-inner">
+                    <div class="review-page__name">
+                        Вася Пупкин
+                    </div>
+                    <div class="review-page__review-text">
+                        Dely Group отличный способ разумно вложить свои сбережения. Поддержка 24/7,
+                        отличные специалисты. <br>
+                        Отлично! Советую!
+                    </div>
+                </div>
+            </div>
+            <div class="review-page__element">
+                <div class="review-page__avatar">
+                    <img src="/img/avatar.png" alt="Аватар">
+                </div>
+                <div class="review-page__element-inner">
+                    <div class="review-page__name">
+                        Вася Пупкин
+                    </div>
+                    <div class="review-page__review-text">
+                        Dely Group отличный способ разумно вложить свои сбережения. Поддержка 24/7,
+                        отличные специалисты. <br>
+                        Отлично! Советую!
+                    </div>
+                </div>
+            </div>
+            <div class="review-page__element">
+                <div class="review-page__avatar">
+                    <img src="/img/avatar.png" alt="Аватар">
+                </div>
+                <div class="review-page__element-inner">
+                    <div class="review-page__name">
+                        Вася Пупкин
+                    </div>
+                    <div class="review-page__review-text">
+                        Dely Group отличный способ разумно вложить свои сбережения. Поддержка 24/7,
+                        отличные специалисты. <br>
+                        Отлично! Советую!
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="container">
+            <div class="link-list-wrapper">
+                <ul class="link-list">
+                    <li class="link-list__element">
+                        Контакты
+                    </li>
+                    <li class="link-list__element">
+                        <a href="#">+7 (495) 032 22 22</a>
+                    </li>
+                    <li class="link-list__element">
+                        <a href="#">suportdelygroup@gmail.com</a>
+                    </li>
+                </ul>
+                <ul class="link-list">
+                    <li class="link-list__element">
+                        О нашей работе
+                    </li>
+                    <li class="link-list__element">
+                        <a href="#">Как мы работаем?</a>
+                    </li>
+                    <li class="link-list__element">
+                        <a href="#">Как с нами заработать?</a>
+                    </li>
+                </ul>
+                <ul class="link-list">
+                    <li class="link-list__element">
+                        Информация
+                    </li>
+                    <li class="link-list__element">
+                        <a href="#">О компании</a>
+                    </li>
+                </ul>
+                <ul class="link-list">
+                    <li class="link-list__element">
+                        Помощь
+                    </li>
+                    <li class="link-list__element">
+                        <a href="#">Тарифы</a>
+                    </li>
+                    <li class="link-list__element">
+                        <a href="#">Отзывы</a>
+                    </li>
+                    <li class="link-list__element">
+                        <a href="#">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="social wow animate__animated animate__pulse">
+                <a href="#"><img src="/img/vk.png" alt="VK"></a>
+                <a href="#"><img src="/img/telegram.png" alt="Telegram"></a>
+                <a href="#"><img src="/img/youtube.png" alt="Youtube"></a>
+            </div>
+        </footer>
+    </main>
+    <script src="js/main.js"></script>
+    <script src="js/splide.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+        const anchors = document.querySelectorAll('a[href*="#"]')
+        for (let anchor of anchors) {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault()
+                const blockID = anchor.getAttribute('href').substr(1)
+                document.getElementById(blockID).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                })
+            })
+        }
+    </script>
+</body>
+
+</html>

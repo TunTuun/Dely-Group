@@ -129,7 +129,7 @@ body {
             content: "";
             display: inline-block;
             height: 34px;
-            width: 4px;
+            min-width: 4px;
             margin-right: 10px;
             background-color: $yellow_;
         }
@@ -157,6 +157,7 @@ body {
         position: relative;
         display: flex;
         align-items: center;
+        cursor: pointer;
         font-size: 22px;
         &:before {
             content: "";

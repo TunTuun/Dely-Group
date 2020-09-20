@@ -137,17 +137,17 @@
         &::placeholder {
             color: $opacity;
         }
-        @media(max-width:1600px) {
+        @media (max-width: 1600px) {
             height: 70%;
         }
-        @media(max-width:1366px) {
+        @media (max-width: 1366px) {
             padding: 20px 30px;
             font-size: 24px;
             height: 80%;
         }
-        @media(max-width:425px) {
+        @media (max-width: 425px) {
             padding: 10px 20px;
-            font-size: 14px;   
+            font-size: 14px;
         }
     }
     &__submit {
@@ -160,18 +160,18 @@
         font-weight: 500;
         font-size: 28px;
         line-height: 33px;
-        @media(max-width:1600px) {
+        @media (max-width: 1600px) {
             height: 25%;
         }
-        @media(max-width:1366px) {
+        @media (max-width: 1366px) {
             font-size: 24px;
             height: 40%;
         }
-        @media(max-width:1024px) {
+        @media (max-width: 1024px) {
             width: 30%;
             height: 30%;
         }
-        @media(max-width:425px) {
+        @media (max-width: 425px) {
             border-radius: 16px;
             font-size: 14px;
             width: 120px;
@@ -237,12 +237,11 @@
         @media (max-width: 425px) {
             border-radius: 48px;
             width: 80%;
-            height: 55%;
+            height: 65%;
         }
         @media (max-width: 340px) {
-            border-radius: 42px;
             width: 90%;
-            height: 53%;
+            height: 65%;
         }
     }
     &__close {
@@ -303,8 +302,12 @@
         border-radius: 10px;
         @media (max-width: 425px) {
             font-size: 10px;
-            height: 20px;
+            height: 20px !important;
             padding: 13px;
+        }
+        @media (max-width: 340px) {
+            height: 15px !important;
+            padding: 12px;
         }
     }
     & > input:focus {
@@ -364,9 +367,12 @@
 
 .remember-checkbox-wrapper {
     width: 100%;
-    margin-top: 40px;
+    margin-top: 80px;
     display: flex;
     justify-content: flex-start;
+    @media (max-width: 425px) {
+        margin-top: 40px;
+    }
     &-registration {
         margin-top: 20px;
         @media (max-width: 425px) {
@@ -1625,5 +1631,88 @@ footer {
         max-width: 100px;
         left: 7%;
         bottom: 55px;
+    }
+}
+// Review
+.review-page {
+    padding: 238px 50px 240px 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (max-width: 425px) {
+        padding: 0 25px 0 25px;
+    }
+    &__header {
+        margin-bottom: 40px;
+        @media(max-width:425px) {
+            display: none;
+        }
+    }
+    &__element {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        max-width: 1120px;
+        display: flex;
+        align-items: center;
+        &-inner {
+            display: flex;
+            flex-direction: column;
+        }
+        @media(max-width:425px) {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            max-width: 276px;
+        }
+    }
+    &__avatar {
+        & > img {
+            max-width: 168px;
+            max-height: 168px;
+            @media (max-width: 425px) {
+                max-width: 65px;
+                max-height: 65px;
+            }
+        }
+        margin-right: 70px;
+        @media(max-width:425px) {
+            margin-right: 30px;
+        }
+    }
+    &__name {
+        position: relative;
+        font-weight: 600;
+        font-size: 27px;
+        &:before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: -9px;
+            width: 5px;
+            height: 25px;
+            background: $yellow_;
+            @media(max-width:425px) {
+                top: 1px;
+                left: -4px;
+                width: 1px;
+                height: 10px;
+            }
+        }
+        @media(max-width:425px) {
+            font-size: 11px;
+            line-height: 13px;
+        }
+    }
+    &__review-text {
+        margin-top: 23px;
+        font-size: 24px;
+        line-height: 29px;
+        @media(max-width:425px) {
+            margin-top: 5px;
+            font-weight: 300;
+            font-size: 9px;
+            line-height: 11px;
+        }
     }
 }
