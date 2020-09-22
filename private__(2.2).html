@@ -1,0 +1,231 @@
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Delay Systems</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/private.css">
+    <link rel="stylesheet" href="css/splide-core.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-wrapper">
+            <div class="logotype">
+                <img src="/img/logotype.png" alt="Логотип">
+            </div>
+            <div class="nav-wrapper">
+                <nav class="header-nav" id="headerNavigation">
+                    <a href="#" class="header-nav__link">Главная</a>
+                    <a href="#" class="header-nav__link">Контактный центр</a>
+                    <a href="#" class="header-nav__link">Отзывы</a>
+                </nav>
+                <div class="account-section">
+                    <div class="account-section__button" id="accountSection">Здравствуйте, 
+                        <span>Вася</span>
+                        <img src="/img/privateHeaderDropdown.png" alt="Открыть">
+                    </div>
+                </div>
+            </div>
+            <div id="accountSectionDropdown" class="account-section-dropdown dropdown-toggle">
+                <div class="account-section-dropdown__element">
+                    Создать депозит
+                </div>
+                <div class="account-section-dropdown__element">
+                    Пополнить баланс
+                </div>
+                <div class="account-section-dropdown__element">
+                    Вывести средства
+                </div>
+                <div class="account-section-dropdown__element">
+                    Партнёрская программа
+                </div>
+                <div class="account-section-dropdown__element">
+                    Выйти с аккаунта
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="side-menu">
+        <ul class="side-menu__list">
+            <li class="side-menu__element close">
+                <div class="side-menu__heading">
+                    Ваши депозиты
+                    <img class="side-menu__arrow" src="/img/privateHeaderDropdown.png" alt="Открыть">
+                </div>
+                <div class="side-menu__content">
+                    <ul class="side-menu__submenu">
+                        <li class="side-menu__subheader side-menu__subheader-active">
+                            Создать депозит
+                        </li>
+                        <li class="side-menu__subheader">
+                            Список депозитов и статистика аккаунта
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="side-menu__element close">
+                <div class="side-menu__heading">
+                    Пополнить баланс
+                    <img class="side-menu__arrow" src="/img/privateHeaderDropdown.png" alt="Открыть">
+                </div>
+                <div class="side-menu__content">
+                    <ul class="side-menu__submenu">
+                        <li class="side-menu__subheader side-menu__subheader-active">
+                            Выбрать способ оплаты
+                        </li>
+                        <li class="side-menu__subheader">
+                            История пополнения баланса
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="side-menu__element close">
+                <div class="side-menu__heading">
+                    Вывести деньги
+                    <img class="side-menu__arrow" src="/img/privateHeaderDropdown.png" alt="Открыть">
+                </div>
+                <div class="side-menu__content">
+                    <ul class="side-menu__submenu">
+                        <li class="side-menu__subheader side-menu__subheader-active">
+                            Создать заявку на вывод средств
+                        </li>
+                        <li class="side-menu__subheader">
+                            История вывода средств
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="side-menu__element close">
+                <div class="side-menu__heading">
+                    Партнёрская программа
+                    <img class="side-menu__arrow" src="/img/privateHeaderDropdown.png" alt="Открыть">
+                </div>
+                <div class="side-menu__content">
+                    <ul class="side-menu__submenu">
+                        <li class="side-menu__subheader side-menu__subheader-active">
+                            Партнёрские ссылки
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <div class="side-menu__exit">
+                Выйти
+            </div>
+            <button class="side-menu__settings">
+                Настройка профайла
+            </button>
+        </ul>
+    </section>
+    <section class="private-container-wrapper">
+        <div class="private-container">
+            <div class="navigation">
+                <span class="navigation__header">Список доступных тарифных планов для создания депозита</span>
+                <div class="navigation__line">
+                    <a href="#" class="navigation__link navigation__link_active">Главная</a>
+                    <img class="navigation__arrow" src="/img/privateNavArrow.png">
+                    <a href="#" class="navigation__link">Личный кабинет</a>
+                    <img class="navigation__arrow" src="/img/privateNavArrow.png">
+                    <a href="#" class="navigation__link">Создать депозит</a>
+                </div>
+            </div>
+            <div class="private-container__inner section-margin table-section">
+                <table class="table">
+                    <tr class="table__title-wrapper">
+                        <td colspan="999" class="table__title">История пополнения счёта</td>
+                    </tr>
+                    <tr class="table__head">
+                        <td class="table__header">
+                            Сумма
+                        </td>
+                        <td class="table__header">
+                            Дата
+                        </td>
+                        <td class="table__header">
+                            Платёжная система
+                        </td>
+                        <td class="table__header">
+                            Номер транзакции
+                        </td>
+                        <td class="table__header">
+                            Статус
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> </td>
+                    </tr>
+                    <tr class="table__element">
+                        <td class="table__value">
+                            15000Р
+                        </td>
+                        <td class="table__value">
+                            21.04.2020
+                        </td>
+                        <td class="table__value">
+                            Yandex
+                        </td>
+                        <td class="table__value">
+                            0000123
+                        </td>
+                        <td class="table__value">
+                            Одобрено
+                        </td>
+                    </tr>
+                    <tr class="table__element">
+                        <td class="table__value">
+                            0.0$
+                        </td>
+                        <td class="table__value">
+                            0.0$
+                        </td>
+                        <td class="table__value">
+                            0.0$
+                        </td>
+                        <td class="table__value">
+                            0.0$
+                        </td>
+                        <td class="table__value">
+                            0.0$
+                        </td>
+                    </tr>
+                    <tr class="table__element">
+                        <td class="table__value">
+                            0.0$
+                        </td>
+                        <td class="table__value">
+                            0.0$
+                        </td>
+                        <td class="table__value">
+                            0.0$
+                        </td>
+                        <td class="table__value">
+                            0.0$
+                        </td>
+                        <td class="table__value">
+                            0.0$
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> </td>
+                    </tr>
+                </table>
+            </div>
+            <footer class="rate-footer">
+                <span class="trademark">Copyright © 2020 Dely Group. Все права защищены.</span>
+                <a class="agreement" href="#">Клиентское соглашение</a>
+            </footer>
+        </div>
+    </section>
+    </main>
+    <script src="js/private.js"></script>
+    <script src="js/splide.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+
+</html>
