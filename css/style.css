@@ -40,6 +40,16 @@
   font-style: normal;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-fixed {
+  padding-top: 113px;
+}
+
 input {
   font-family: "SF-Pro-Display";
   font-style: normal;
@@ -252,12 +262,18 @@ header {
   border-radius: 0 0 20px 20px;
 }
 
-.nav-wrapper-mobile .header-nav {
+@media (max-width: 1024px) {
+  .nav-wrapper-mobile {
+    display: block;
+  }
+}
+
+.header-nav {
   height: 90%;
   padding: 10px 0;
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -269,22 +285,27 @@ header {
       justify-content: space-around;
 }
 
-.nav-wrapper-mobile .header-nav__link {
+.header-nav__link {
   margin-left: 0;
 }
 
 @media (max-width: 1024px) {
-  .nav-wrapper-mobile {
-    display: block;
+  .header-nav {
+    display: none;
   }
 }
 
 .header-nav__link {
   margin-left: 20px;
+  cursor: pointer;
+}
+
+.header-nav__link:hover {
+  color: #ffee00;
 }
 
 @media (max-width: 1024px) {
-  .header-nav {
+  .header-nav__display {
     display: none;
   }
 }
@@ -718,7 +739,7 @@ header {
   font-family: "SF-Pro-Display";
   display: block;
   position: fixed;
-  z-index: 2;
+  z-index: 1001;
   width: 100vw;
   height: 100vh;
   background-color: rgba(7, 7, 53, 0.55);
@@ -771,14 +792,13 @@ header {
   .authorization-showup__block {
     border-radius: 48px;
     width: 80%;
-    height: 65%;
+    height: 85%;
   }
 }
 
 @media (max-width: 340px) {
   .authorization-showup__block {
     width: 90%;
-    height: 65%;
   }
 }
 
@@ -869,6 +889,7 @@ header {
   border: 1px solid rgba(0, 0, 0, 0.25);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-size: 16px;
   border-radius: 10px;
 }
 
@@ -2089,6 +2110,10 @@ header {
   }
 }
 
+.review-element__avatar > img {
+  border-radius: 50%;
+}
+
 @media (max-width: 1024px) {
   .review-element__avatar > img {
     max-width: 128px;
@@ -3018,6 +3043,7 @@ footer {
 .review-page__avatar > img {
   max-width: 168px;
   max-height: 168px;
+  border-radius: 50%;
 }
 
 @media (max-width: 425px) {

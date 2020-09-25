@@ -12,6 +12,88 @@
 </head>
 
 <body>
+    <div class="contact-showup mobile-toggle">
+        <div class="contact-showup__wrapper">
+            <div class="contact-showup__block contact-section">
+                <button class="contact-showup__close">
+                    <img src="/img/close-dialog.png" alt="Закрыть" id="closeDialogContact">
+                </button>
+                <div class="title title_margin">Контактный центр</div>
+                <div class="subtitle">Подпишитесь на наши социальные сети, чтобы всегда быть в курсе событий:</div>
+                <div class="contact__social-wrapper contact__social-wrapper_margin">
+                    <a href="#" class="contact__social-block">
+                        <div class="contact__social-img">
+                            <img src="/img/social/vk.png" alt="VK">
+                        </div>
+                        <span class="contact__social-name">
+                            /delay_group
+                        </span>
+                        <span class="contact__social-link">
+                            Подписаться
+                        </span>
+                    </a>
+                    <a href="#" class="contact__social-block">
+                        <div class="contact__social-img">
+                            <img src="/img/social/tg.png" alt="Telegram">
+                        </div>
+                        <span class="contact__social-name">
+                            @Delay_group
+                        </span>
+                        <span class="contact__social-link">
+                            Подписаться
+                        </span>
+                    </a>
+                    <a href="#" class="contact__social-block">
+                        <div class="contact__social-img">
+                            <img src="/img/social/youtube.png" alt="Youtube">
+                        </div>
+                        <span class="contact__social-name">
+                            Delay group
+                        </span>
+                        <span class="contact__social-link">
+                            Подписаться
+                        </span>
+                    </a>
+                </div>
+                <div class="subtitle">Контакты консультантов и технической поддержки:</div>
+                <div class="contact__social-wrapper">
+                    <a href="#" class="contact__social-block">
+                        <div class="contact__social-img">
+                            <img src="/img/social/vk.png" alt="VK">
+                        </div>
+                        <span class="contact__social-name">
+                            /delay_info
+                        </span>
+                        <span class="contact__social-link">
+                            Подписаться
+                        </span>
+                    </a>
+                    <a href="#" class="contact__social-block">
+                        <div class="contact__social-img">
+                            <img src="/img/social/mail.png" alt="Mail">
+                        </div>
+                        <span class="contact__social-name">
+                            support@dely.com
+                        </span>
+                        <span class="contact__social-link">
+                            Подписаться
+                        </span>
+                    </a>
+                    <a href="#" class="contact__social-block">
+                        <div class="contact__social-img">
+                            <img src="/img/social/chat.png" alt="Chat">
+                        </div>
+                        <span class="contact__social-name">
+                            Live-консультант
+                        </span>
+                        <span class="contact__social-link">
+                            Подписаться
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
     <header>
         <div class="header-wrapper">
             <div class="logotype">
@@ -20,7 +102,7 @@
             <div class="nav-wrapper">
                 <nav class="header-nav" id="headerNavigation">
                     <a href="#" class="header-nav__link">Главная</a>
-                    <a href="#" class="header-nav__link">Контактный центр</a>
+                    <a id="contactShowup" class="header-nav__link">Контактный центр</a>
                     <a href="#" class="header-nav__link">Отзывы</a>
                 </nav>
                 <div class="account-section">
@@ -120,7 +202,7 @@
             </button>
         </ul>
     </section>
-    <section class="private-container-wrapper">
+    <section class="private-container-wrapper header-fixed">
         <div class="private-container">
             <div class="navigation">
                 <span class="navigation__header">Список доступных тарифных планов для создания депозита</span>

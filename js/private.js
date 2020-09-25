@@ -1,4 +1,31 @@
 "use strict";
+// Contact showup
+function contactShowup() {
+    document.querySelector(".contact-showup").classList.toggle("mobile-toggle");
+}
+document.getElementById("contactShowup").addEventListener("click", function (event) {
+    contactShowup();
+});
+document.getElementById("closeDialogContact").addEventListener("click", function (event) {
+    contactShowup();
+});
+// Settings showup
+function settingsShowup() {
+    document.querySelector(".settings-showup").classList.toggle("mobile-toggle");
+}
+document.getElementById("openSettings").addEventListener("click", function (event) {
+    settingsShowup();
+});
+document.getElementById("closeSettings").addEventListener("click", function (event) {
+    settingsShowup();
+});
+document.getElementById("settingsBackground").addEventListener("click", function (event) {
+    event.stopPropagation();
+    if (event.target.id == "settingsBackground") {
+        settingsShowup();
+    }
+});
+
 // Menu accordion
 let accItem = document.getElementsByClassName('side-menu__element');
 let accHD = document.getElementsByClassName('side-menu__heading');

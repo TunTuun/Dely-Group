@@ -12,6 +12,154 @@
 </head>
 
 <body>
+    <div class="settings-showup mobile-toggle" id="settingsBackground">
+        <div class="settings-showup__wrapper">
+            <div class="settings-showup__header">
+                <div class="settings-showup__header-title">
+                    Настройка профайла
+                </div>
+                <div class="settings-showup__close-button" id="closeSettings">
+                    <img src="/img/close-dialog.png" alt="Закрыть">
+                </div>
+            </div>
+            <div class="settings-showup__separator_long"></div>
+            <div class="settings-showup__inner">
+                <div class="settings-showup__avatar">
+                    <div class="settings-showup__avatar-img">
+                        <img src="/img/avatar.png" alt="Аватар">
+                    </div>
+                    <div class="settings-showup__avatar-title">
+                        pavel pavlovich
+                    </div>
+                    <div class="settings-showup__avatar-id">
+                        инвестор #56578
+                    </div>
+                </div>
+                <div class="settings-showup__separator"></div>
+                <div class="settings-showup__account-settings">
+                    <div class="settings-showup__title">
+                        Пароль
+                    </div>
+                    <div class="settings-showup__settings-description">
+                        Для безопасности Вашего аккаунта, рекомендуем изменять 
+                        пароль раз в три месяца, а также не использовать одинаковые 
+                        комбинации.
+                    </div>
+                    <div class="settings-showup__change-button" id="changePassword">
+                        Изменить пароль
+                    </div>
+                </div>
+                <div class="settings-showup__separator"></div>
+                <div class="settings-showup__account-settings">
+                    <div class="settings-showup__title">
+                        E-Mail
+                    </div>
+                    <div class="settings-showup__settings-description">
+                        Ваш E-MAIL: n*********@acceptmail.net
+                    </div>
+                    <div class="settings-showup__change-button" id="changeEmail">
+                        Изменить e-mail
+                    </div>
+                </div>
+                <div class="settings-showup__separator"></div>
+                <div class="settings-showup__account-settings">
+                    <div class="settings-showup__title">
+                        Платежные реквизиты
+                    </div>
+                    <div class="settings-showup__requisites">
+                        <div class="settings-showup__requisites-element">
+                            
+                        </div>
+                    </div>
+                    <div class="settings-showup__change-button">
+                        Изменить реквизиты
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact-showup mobile-toggle">
+        <div class="contact-showup__wrapper">
+            <div class="contact-showup__block contact-section">
+                <button class="contact-showup__close">
+                    <img src="/img/close-dialog.png" alt="Закрыть" id="closeDialogContact">
+                </button>
+                <div class="title title_margin">Контактный центр</div>
+                <div class="subtitle">Подпишитесь на наши социальные сети, чтобы всегда быть в курсе событий:</div>
+                <div class="contact__social-wrapper contact__social-wrapper_margin">
+                    <a href="#" class="contact__social-block">
+                        <div class="contact__social-img">
+                            <img src="/img/social/vk.png" alt="VK">
+                        </div>
+                        <span class="contact__social-name">
+                            /delay_group
+                        </span>
+                        <span class="contact__social-link">
+                            Подписаться
+                        </span>
+                    </a>
+                    <a href="#" class="contact__social-block">
+                        <div class="contact__social-img">
+                            <img src="/img/social/tg.png" alt="Telegram">
+                        </div>
+                        <span class="contact__social-name">
+                            @Delay_group
+                        </span>
+                        <span class="contact__social-link">
+                            Подписаться
+                        </span>
+                    </a>
+                    <a href="#" class="contact__social-block">
+                        <div class="contact__social-img">
+                            <img src="/img/social/youtube.png" alt="Youtube">
+                        </div>
+                        <span class="contact__social-name">
+                            Delay group
+                        </span>
+                        <span class="contact__social-link">
+                            Подписаться
+                        </span>
+                    </a>
+                </div>
+                <div class="subtitle">Контакты консультантов и технической поддержки:</div>
+                <div class="contact__social-wrapper">
+                    <a href="#" class="contact__social-block">
+                        <div class="contact__social-img">
+                            <img src="/img/social/vk.png" alt="VK">
+                        </div>
+                        <span class="contact__social-name">
+                            /delay_info
+                        </span>
+                        <span class="contact__social-link">
+                            Подписаться
+                        </span>
+                    </a>
+                    <a href="#" class="contact__social-block">
+                        <div class="contact__social-img">
+                            <img src="/img/social/mail.png" alt="Mail">
+                        </div>
+                        <span class="contact__social-name">
+                            support@dely.com
+                        </span>
+                        <span class="contact__social-link">
+                            Подписаться
+                        </span>
+                    </a>
+                    <a href="#" class="contact__social-block">
+                        <div class="contact__social-img">
+                            <img src="/img/social/chat.png" alt="Chat">
+                        </div>
+                        <span class="contact__social-name">
+                            Live-консультант
+                        </span>
+                        <span class="contact__social-link">
+                            Подписаться
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
     <header>
         <div class="header-wrapper">
             <div class="logotype">
@@ -20,7 +168,7 @@
             <div class="nav-wrapper">
                 <nav class="header-nav" id="headerNavigation">
                     <a href="#" class="header-nav__link">Главная</a>
-                    <a href="#" class="header-nav__link">Контактный центр</a>
+                    <a id="contactShowup" class="header-nav__link">Контактный центр</a>
                     <a href="#" class="header-nav__link">Отзывы</a>
                 </nav>
                 <div class="account-section">
@@ -115,12 +263,12 @@
             <div class="side-menu__exit">
                 Выйти
             </div>
-            <button class="side-menu__settings">
+            <button class="side-menu__settings" id="openSettings">
                 Настройка профайла
             </button>
         </ul>
     </section>
-    <section class="private-container-wrapper">
+    <section class="private-container-wrapper header-fixed">
         <div class="private-container">
             <div class="navigation">
                 <span class="navigation__header">Список доступных тарифных планов для создания депозита</span>

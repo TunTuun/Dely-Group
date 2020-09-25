@@ -205,7 +205,7 @@
     font-family: $main-font;
     display: block;
     position: fixed;
-    z-index: 2;
+    z-index: 1001;
     width: 100vw;
     height: 100vh;
     background-color: $fadeout;
@@ -237,11 +237,10 @@
         @media (max-width: 425px) {
             border-radius: 48px;
             width: 80%;
-            height: 65%;
+            height: 85%;
         }
         @media (max-width: 340px) {
             width: 90%;
-            height: 65%;
         }
     }
     &__close {
@@ -299,6 +298,7 @@
         padding: 20px;
         border: 1px solid $opacity;
         box-sizing: border-box;
+        font-size: 16px;
         border-radius: 10px;
         @media (max-width: 425px) {
             font-size: 10px;
@@ -1082,6 +1082,7 @@
             margin-right: 30px;
         }
         & > img {
+            border-radius: 50%;
             @media (max-width: 1024px) {
                 max-width: 128px;
             }
@@ -1669,6 +1670,7 @@ footer {
         & > img {
             max-width: 168px;
             max-height: 168px;
+            border-radius: 50%;
             @media (max-width: 425px) {
                 max-width: 65px;
                 max-height: 65px;
