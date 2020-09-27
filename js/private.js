@@ -25,6 +25,24 @@ document.getElementById("settingsBackground").addEventListener("click", function
         settingsShowup();
     }
 });
+// Menu showup
+function menuShowup() {
+    document.querySelector(".side-menu__background").style.display = 'block';
+    document.querySelector(".side-menu__open-button-wrapper").style.display = 'none';
+    document.querySelector(".side-menu").style.left = '0';
+}
+function menuClose() {
+    document.querySelector(".side-menu__background").style.display = 'none';
+    document.querySelector(".side-menu__open-button-wrapper").style.display = 'block';
+    document.querySelector(".side-menu").style.left = '-50%';
+}
+document.getElementById("openMenu").addEventListener("click", function (event) {
+    menuShowup();
+});
+
+document.getElementById("menuBG").addEventListener("touchstart", function (event) {
+    menuClose();
+});
 
 // Menu accordion
 let accItem = document.getElementsByClassName('side-menu__element');
